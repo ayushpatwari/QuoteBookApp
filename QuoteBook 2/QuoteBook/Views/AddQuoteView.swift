@@ -9,15 +9,6 @@ struct AddQuoteView: View {
     
     @ObservedObject var model = ViewModel()
     
-    @State private var emptyContent: Bool = false
-    @State private var numberOfShakes: Int = 0
-    let words = ""
-    
-    @State private var content = ""
-    @State private var author = ""
-    
-    @State private var showingAddView = false
-    @State private var isExpanded = false
     @State private var selectedNum = 1
     
     init() {
