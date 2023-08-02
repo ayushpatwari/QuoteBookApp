@@ -8,15 +8,6 @@ import Firebase
 
 
 struct ContentView: View {
-    
-    @ObservedObject var model = ViewModel()
-    
-    @State private var showingAddView = false
-    @State var refresh = Refresh(started: false, released: false)
-    
-    
-    var body: some View {
-        
         ZStack (alignment: .bottomTrailing){
             NavigationView {
                 ScrollView{
