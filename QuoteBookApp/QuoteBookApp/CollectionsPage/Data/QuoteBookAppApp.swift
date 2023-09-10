@@ -11,16 +11,14 @@ import Firebase
 
 @main
 struct QuoteBookAppApp: App {
-    @ObservedObject var model = ViewModel()
     
     init() {
         FirebaseApp.configure()
-        model.getCollection()
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(collection: Collection.all)
         }
     }
 }

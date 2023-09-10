@@ -8,20 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		FA0F72B52A590CF100C94D95 /* CollectionsEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F72B42A590CF100C94D95 /* CollectionsEditor.swift */; };
-		FA10FD5F2A9A5329007DAE96 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10FD5E2A9A5329007DAE96 /* Library.swift */; };
 		FA2D8BDD2A6EFCF7000EE10C /* tab bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */; };
+		FA31217A2AA39EDA001366F9 /* DiscoverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121792AA39EDA001366F9 /* DiscoverPage.swift */; };
+		FA31217C2AA39F15001366F9 /* SingleQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31217B2AA39F15001366F9 /* SingleQuote.swift */; };
+		FA31217E2AA39F45001366F9 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31217D2AA39F45001366F9 /* QuoteService.swift */; };
+		FA3121802AA39FCE001366F9 /* ColorChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31217F2AA39FCE001366F9 /* ColorChanger.swift */; };
+		FA3121832AA3A1EF001366F9 /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121822AA3A1EF001366F9 /* QuoteViewModel.swift */; };
+		FA3121892AA3C2C0001366F9 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121882AA3C2C0001366F9 /* LibraryViewModel.swift */; };
+		FA31218C2AA3C305001366F9 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31218B2AA3C305001366F9 /* TagView.swift */; };
+		FA31218F2AA3C341001366F9 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31218E2AA3C341001366F9 /* TimeFormatting.swift */; };
+		FA3121912AA3C35B001366F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121902AA3C35B001366F9 /* AppDelegate.swift */; };
+		FA3121932AA3C375001366F9 /* GoogleSignBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121922AA3C375001366F9 /* GoogleSignBtn.swift */; };
+		FA3121982AA3C4BC001366F9 /* AddQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */; };
+		FA31219B2AA3C533001366F9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FA31219A2AA3C533001366F9 /* GoogleSignIn */; };
+		FA31219D2AA3C533001366F9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA31219C2AA3C533001366F9 /* GoogleSignInSwift */; };
+		FA31219F2AA3C56B001366F9 /* +View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31219E2AA3C56B001366F9 /* +View.swift */; };
+		FA3121A12AA3C5EF001366F9 /* EditQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */; };
+		FA3121A42AA42056001366F9 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = FA3121A32AA42056001366F9 /* HalfASheet */; };
 		FA3F4A092A4C73E60003E18B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A082A4C73E60003E18B /* ContentView.swift */; };
 		FA3F4A0B2A4C73E70003E18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */; };
 		FA3F4A0E2A4C73E70003E18B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F4A0D2A4C73E70003E18B /* Preview Assets.xcassets */; };
 		FA3F4A182A4C73E70003E18B /* QuoteBookAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A172A4C73E70003E18B /* QuoteBookAppTests.swift */; };
 		FA3F4A222A4C73E70003E18B /* QuoteBookAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A212A4C73E70003E18B /* QuoteBookAppUITests.swift */; };
 		FA3F4A242A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A232A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift */; };
-		FA5A087A2A79AC8D002F139B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A08792A79AC8D002F139B /* Quote.swift */; };
+		FA5A087A2A79AC8D002F139B /* DiscoverQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A08792A79AC8D002F139B /* DiscoverQuote.swift */; };
 		FA5A087C2A79AE9E002F139B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A087B2A79AE9E002F139B /* ViewModel.swift */; };
-		FA708D722A7B1A67000D0BE0 /* why does thi exist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA708D712A7B1A67000D0BE0 /* why does thi exist.swift */; };
+		FA89AF372AA656B6005778BE /* LibraryQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF362AA656B6005778BE /* LibraryQuoteModel.swift */; };
+		FA89AF392AA657AC005778BE /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF382AA657AC005778BE /* LoginScreen.swift */; };
+		FA89AF3B2AA657DF005778BE /* TagSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF3A2AA657DF005778BE /* TagSelectionView.swift */; };
+		FA89AF3F2AA65A7E005778BE /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF3E2AA65A7E005778BE /* LibraryView.swift */; };
+		FA89AF412AA65BA1005778BE /* DateStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF402AA65BA1005778BE /* DateStuff.swift */; };
+		FA89AF482AA65C3F005778BE /* CollectionQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF472AA65C3F005778BE /* CollectionQuote.swift */; };
+		FA89AF4C2AA67F05005778BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA89AF4B2AA67F05005778BE /* GoogleService-Info.plist */; };
+		FAA312082AAD1FC900140B1E /* ColorSwitching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA312072AAD1FC900140B1E /* ColorSwitching.swift */; };
 		FADAEF1D2A7948EB00F246EE /* QuoteBookAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */; };
 		FAF01E222A6D70E600A960EF /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF01E212A6D70E600A960EF /* CollectionsView.swift */; };
-		FAF525A82A740DE500474C13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAF525A72A740DE500474C13 /* GoogleService-Info.plist */; };
 		FAF525AB2A740F4200474C13 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525AA2A740F4200474C13 /* FirebaseFirestore */; };
 		FAF525AE2A74107400474C13 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525AD2A74107400474C13 /* FirebaseAuth */; };
 		FAF525B02A74107400474C13 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525AF2A74107400474C13 /* FirebaseFirestoreSwift */; };
@@ -48,8 +69,20 @@
 
 /* Begin PBXFileReference section */
 		FA0F72B42A590CF100C94D95 /* CollectionsEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsEditor.swift; sourceTree = "<group>"; };
-		FA10FD5E2A9A5329007DAE96 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tab bar.swift"; sourceTree = "<group>"; };
+		FA3121792AA39EDA001366F9 /* DiscoverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPage.swift; sourceTree = "<group>"; };
+		FA31217B2AA39F15001366F9 /* SingleQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleQuote.swift; sourceTree = "<group>"; };
+		FA31217D2AA39F45001366F9 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		FA31217F2AA39FCE001366F9 /* ColorChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChanger.swift; sourceTree = "<group>"; };
+		FA3121822AA3A1EF001366F9 /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
+		FA3121882AA3C2C0001366F9 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		FA31218B2AA3C305001366F9 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		FA31218E2AA3C341001366F9 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		FA3121902AA3C35B001366F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA3121922AA3C375001366F9 /* GoogleSignBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignBtn.swift; sourceTree = "<group>"; };
+		FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteView.swift; sourceTree = "<group>"; };
+		FA31219E2AA3C56B001366F9 /* +View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+View.swift"; sourceTree = "<group>"; };
+		FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuoteView.swift; sourceTree = "<group>"; };
 		FA3F4A032A4C73E60003E18B /* QuoteBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3F4A082A4C73E60003E18B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,12 +92,18 @@
 		FA3F4A1D2A4C73E70003E18B /* QuoteBookAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteBookAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3F4A212A4C73E70003E18B /* QuoteBookAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppUITests.swift; sourceTree = "<group>"; };
 		FA3F4A232A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FA5A08792A79AC8D002F139B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		FA5A08792A79AC8D002F139B /* DiscoverQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverQuote.swift; sourceTree = "<group>"; };
 		FA5A087B2A79AE9E002F139B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		FA708D712A7B1A67000D0BE0 /* why does thi exist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "why does thi exist.swift"; sourceTree = "<group>"; };
+		FA89AF362AA656B6005778BE /* LibraryQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryQuoteModel.swift; sourceTree = "<group>"; };
+		FA89AF382AA657AC005778BE /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		FA89AF3A2AA657DF005778BE /* TagSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectionView.swift; sourceTree = "<group>"; };
+		FA89AF3E2AA65A7E005778BE /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		FA89AF402AA65BA1005778BE /* DateStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStuff.swift; sourceTree = "<group>"; };
+		FA89AF472AA65C3F005778BE /* CollectionQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionQuote.swift; sourceTree = "<group>"; };
+		FA89AF4B2AA67F05005778BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAA312072AAD1FC900140B1E /* ColorSwitching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwitching.swift; sourceTree = "<group>"; };
 		FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppApp.swift; sourceTree = "<group>"; };
 		FAF01E212A6D70E600A960EF /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
-		FAF525A72A740DE500474C13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAF525B72A744DEE00474C13 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,8 +112,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA31219B2AA3C533001366F9 /* GoogleSignIn in Frameworks */,
 				FAF525AB2A740F4200474C13 /* FirebaseFirestore in Frameworks */,
 				FAF525B22A74107400474C13 /* FirebaseStorage in Frameworks */,
+				FA3121A42AA42056001366F9 /* HalfASheet in Frameworks */,
+				FA31219D2AA3C533001366F9 /* GoogleSignInSwift in Frameworks */,
 				FAF525AE2A74107400474C13 /* FirebaseAuth in Frameworks */,
 				FAF525B02A74107400474C13 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -97,6 +139,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3121812AA3A1C4001366F9 /* DisoverPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA89AF432AA65BDC005778BE /* Views */,
+				FA89AF422AA65BC7005778BE /* ViewModel */,
+				FA89AF452AA65BEF005778BE /* Services */,
+				FA89AF442AA65BEB005778BE /* Model */,
+			);
+			path = DisoverPage;
+			sourceTree = "<group>";
+		};
+		FA3121852AA3A236001366F9 /* CollectionsPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E74272A676C82003A0EEC /* Views */,
+				FA58C0FB2A6818FC001B4962 /* Data */,
+				FA0F72B42A590CF100C94D95 /* CollectionsEditor.swift */,
+				FAF01E212A6D70E600A960EF /* CollectionsView.swift */,
+				FA89AF472AA65C3F005778BE /* CollectionQuote.swift */,
+			);
+			path = CollectionsPage;
+			sourceTree = "<group>";
+		};
+		FA3121872AA3A272001366F9 /* LibraryAndQuoteMaker */ = {
+			isa = PBXGroup;
+			children = (
+				FA89AF3D2AA65A51005778BE /* Views */,
+				FA89AF3C2AA65A2E005778BE /* Helpers */,
+			);
+			path = LibraryAndQuoteMaker;
+			sourceTree = "<group>";
+		};
 		FA3F49FA2A4C73E60003E18B = {
 			isa = PBXGroup;
 			children = (
@@ -120,11 +194,13 @@
 		FA3F4A052A4C73E60003E18B /* QuoteBookApp */ = {
 			isa = PBXGroup;
 			children = (
-				FAF525A72A740DE500474C13 /* GoogleService-Info.plist */,
+				FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */,
+				FA89AF4B2AA67F05005778BE /* GoogleService-Info.plist */,
+				FA3F4A082A4C73E60003E18B /* ContentView.swift */,
 				FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */,
-				FA58C0FB2A6818FC001B4962 /* Data */,
-				FA4E742B2A676E32003A0EEC /* Quotes */,
-				FA4E74272A676C82003A0EEC /* Views */,
+				FA3121852AA3A236001366F9 /* CollectionsPage */,
+				FA3121872AA3A272001366F9 /* LibraryAndQuoteMaker */,
+				FA3121812AA3A1C4001366F9 /* DisoverPage */,
 				FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */,
 				FA3F4A0C2A4C73E70003E18B /* Preview Content */,
 			);
@@ -159,31 +235,79 @@
 		FA4E74272A676C82003A0EEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA0F72B42A590CF100C94D95 /* CollectionsEditor.swift */,
-				FA10FD5E2A9A5329007DAE96 /* Library.swift */,
-				FA3F4A082A4C73E60003E18B /* ContentView.swift */,
-				FAF01E212A6D70E600A960EF /* CollectionsView.swift */,
-				FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */,
-				FA708D712A7B1A67000D0BE0 /* why does thi exist.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FA4E742B2A676E32003A0EEC /* Quotes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Quotes;
 			sourceTree = "<group>";
 		};
 		FA58C0FB2A6818FC001B4962 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				FAF525B72A744DEE00474C13 /* AuthViewModel.swift */,
-				FA5A08792A79AC8D002F139B /* Quote.swift */,
 				FA5A087B2A79AE9E002F139B /* ViewModel.swift */,
+				FAA312072AAD1FC900140B1E /* ColorSwitching.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		FA89AF3C2AA65A2E005778BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA31218E2AA3C341001366F9 /* TimeFormatting.swift */,
+				FA3121882AA3C2C0001366F9 /* LibraryViewModel.swift */,
+				FA89AF362AA656B6005778BE /* LibraryQuoteModel.swift */,
+				FA31218B2AA3C305001366F9 /* TagView.swift */,
+				FA3121902AA3C35B001366F9 /* AppDelegate.swift */,
+				FA3121922AA3C375001366F9 /* GoogleSignBtn.swift */,
+				FA31219E2AA3C56B001366F9 /* +View.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA89AF3D2AA65A51005778BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA89AF3E2AA65A7E005778BE /* LibraryView.swift */,
+				FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */,
+				FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */,
+				FA89AF3A2AA657DF005778BE /* TagSelectionView.swift */,
+				FA89AF382AA657AC005778BE /* LoginScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA89AF422AA65BC7005778BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA3121822AA3A1EF001366F9 /* QuoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA89AF432AA65BDC005778BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3121792AA39EDA001366F9 /* DiscoverPage.swift */,
+				FA31217B2AA39F15001366F9 /* SingleQuote.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA89AF442AA65BEB005778BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5A08792A79AC8D002F139B /* DiscoverQuote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA89AF452AA65BEF005778BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA31217D2AA39F45001366F9 /* QuoteService.swift */,
+				FA31217F2AA39FCE001366F9 /* ColorChanger.swift */,
+				FA89AF402AA65BA1005778BE /* DateStuff.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +331,9 @@
 				FAF525AD2A74107400474C13 /* FirebaseAuth */,
 				FAF525AF2A74107400474C13 /* FirebaseFirestoreSwift */,
 				FAF525B12A74107400474C13 /* FirebaseStorage */,
+				FA31219A2AA3C533001366F9 /* GoogleSignIn */,
+				FA31219C2AA3C533001366F9 /* GoogleSignInSwift */,
+				FA3121A32AA42056001366F9 /* HalfASheet */,
 			);
 			productName = QuoteBookApp;
 			productReference = FA3F4A032A4C73E60003E18B /* QuoteBookApp.app */;
@@ -283,6 +410,8 @@
 			packageReferences = (
 				FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				FAF525AC2A74107400474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				FA3121A22AA42056001366F9 /* XCRemoteSwiftPackageReference "HalfASheet" */,
 			);
 			productRefGroup = FA3F4A042A4C73E60003E18B /* Products */;
 			projectDirPath = "";
@@ -301,8 +430,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3F4A0E2A4C73E70003E18B /* Preview Assets.xcassets in Resources */,
+				FA89AF4C2AA67F05005778BE /* GoogleService-Info.plist in Resources */,
 				FA3F4A0B2A4C73E70003E18B /* Assets.xcassets in Resources */,
-				FAF525A82A740DE500474C13 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,15 +456,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA89AF412AA65BA1005778BE /* DateStuff.swift in Sources */,
+				FA3121892AA3C2C0001366F9 /* LibraryViewModel.swift in Sources */,
 				FA5A087C2A79AE9E002F139B /* ViewModel.swift in Sources */,
+				FA89AF372AA656B6005778BE /* LibraryQuoteModel.swift in Sources */,
 				FAF01E222A6D70E600A960EF /* CollectionsView.swift in Sources */,
-				FA708D722A7B1A67000D0BE0 /* why does thi exist.swift in Sources */,
+				FA3121982AA3C4BC001366F9 /* AddQuoteView.swift in Sources */,
+				FAA312082AAD1FC900140B1E /* ColorSwitching.swift in Sources */,
+				FA31219F2AA3C56B001366F9 /* +View.swift in Sources */,
 				FA3F4A092A4C73E60003E18B /* ContentView.swift in Sources */,
+				FA3121A12AA3C5EF001366F9 /* EditQuoteView.swift in Sources */,
+				FA89AF392AA657AC005778BE /* LoginScreen.swift in Sources */,
 				FA2D8BDD2A6EFCF7000EE10C /* tab bar.swift in Sources */,
 				FADAEF1D2A7948EB00F246EE /* QuoteBookAppApp.swift in Sources */,
+				FA3121832AA3A1EF001366F9 /* QuoteViewModel.swift in Sources */,
+				FA31217A2AA39EDA001366F9 /* DiscoverPage.swift in Sources */,
 				FA0F72B52A590CF100C94D95 /* CollectionsEditor.swift in Sources */,
-				FA10FD5F2A9A5329007DAE96 /* Library.swift in Sources */,
-				FA5A087A2A79AC8D002F139B /* Quote.swift in Sources */,
+				FA31218F2AA3C341001366F9 /* TimeFormatting.swift in Sources */,
+				FA3121932AA3C375001366F9 /* GoogleSignBtn.swift in Sources */,
+				FA31217E2AA39F45001366F9 /* QuoteService.swift in Sources */,
+				FA31217C2AA39F15001366F9 /* SingleQuote.swift in Sources */,
+				FA89AF3F2AA65A7E005778BE /* LibraryView.swift in Sources */,
+				FA31218C2AA3C305001366F9 /* TagView.swift in Sources */,
+				FA3121802AA39FCE001366F9 /* ColorChanger.swift in Sources */,
+				FA5A087A2A79AC8D002F139B /* DiscoverQuote.swift in Sources */,
+				FA89AF482AA65C3F005778BE /* CollectionQuote.swift in Sources */,
+				FA3121912AA3C35B001366F9 /* AppDelegate.swift in Sources */,
+				FA89AF3B2AA657DF005778BE /* TagSelectionView.swift in Sources */,
 				FAF525B82A744DEE00474C13 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +556,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -469,6 +617,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -657,6 +806,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		FA3121A22AA42056001366F9 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 		FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -676,6 +841,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA31219A2AA3C533001366F9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		FA31219C2AA3C533001366F9 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		FA3121A32AA42056001366F9 /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3121A22AA42056001366F9 /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
 		FAF525AA2A740F4200474C13 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
