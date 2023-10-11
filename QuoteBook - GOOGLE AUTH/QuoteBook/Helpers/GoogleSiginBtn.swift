@@ -13,18 +13,29 @@ struct GoogleSiginBtn: View {
         Button {
             action()
         } label: {
-            ZStack{
-                Circle()
-                    .foregroundColor(.white)
-                    .shadow(color: .gray, radius: 4, x: 0, y: 2)
-                Image("GoogleLogo")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(8)
-                    .mask(
-                        Circle()
-                    )
+            ZStack {
+                Rectangle()
+                    .foregroundColor(Color(#colorLiteral(red: 0.09948726743, green: 0.582545042, blue: 0.7341625094, alpha: 1)))
+                    .cornerRadius(25)
+                
+                HStack{
+                    Image("GoogleLogo")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Spacer()
+                    
+                    Text("Continue with Google")
+                        .foregroundColor(.black)
+                        .font(.custom("JosefinSans-Regular", size: 30))
+                        .bold()
+                    
+                }
+                .padding()
             }
+            .frame(maxWidth: .infinity)
+            .frame(height: 100)
+            .padding()
         }
     }
 }

@@ -18,7 +18,6 @@ struct QuoteBookApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            
             if !isSignIn {
                 LoginScreen()
             } else {

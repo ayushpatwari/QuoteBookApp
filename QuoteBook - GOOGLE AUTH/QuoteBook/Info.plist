@@ -34,6 +34,14 @@
 </string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>YoungSerif-Regular.ttf</string>
+		<string>JosefinSans-Regular.ttf</string>
+		<string>JosefinSans-SemiBold.ttf</string>
+		<string>JosefinSans-Bold.ttf</string>
+		<string>JosefinSans-Italic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

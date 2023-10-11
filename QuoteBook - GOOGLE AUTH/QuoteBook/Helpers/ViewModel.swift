@@ -12,7 +12,6 @@ import FirebaseFirestore
 class ViewModel: ObservableObject {
     
     @Published var quotes = [Quote]()
-    @Published var totalQuotesCount = 0
 
     
     func getDataForCurrentUser() {
@@ -86,8 +85,7 @@ class ViewModel: ObservableObject {
                         // Handle the error
                         print("Error deleting quote: \(error.localizedDescription)")
                     } else {
-                        // Successfully deleted the quote, decrement the totalQuotes count
-                        self.updateTotalQuotesCount(forUserUID: currentUserUID, newCount: self.quotes.count - 1)
+                        return
                     }
                 }
         }
@@ -115,8 +113,7 @@ class ViewModel: ObservableObject {
                 // Handle the error
                 print("Error adding quote: \(error.localizedDescription)")
             } else {
-                // Successfully added the quote, increment the totalQuotes count
-                self.updateTotalQuotesCount(forUserUID: currentUserUID, newCount: self.quotes.count + 1)
+                return
             }
         }
     }
@@ -147,88 +144,6 @@ class ViewModel: ObservableObject {
                 // Handle the error
             }
         }
-    }
-    
-    func updateLifeQuote(newLifeQuote: String) {
-        if let currentUserUID = Auth.auth().currentUser?.uid {
-            let db = Firestore.firestore()
-            
-            // Update the lifeQuote field in the "userInfo" collection for the current user
-            db.collection("users")
-                .document(currentUserUID)
-                .collection("userInfo")
-                .document("userInfo") // You can use a specific document ID for userInfo if needed
-                .setData(["lifeQuote": newLifeQuote], merge: true) { error in
-                    if error == nil {
-                        // Successfully updated the lifeQuote
-                    } else {
-                        // Handle the error
-                    }
-                }
-        }
-    }
-    
-    func fetchLifeQuote(completion: @escaping (String) -> Void) {
-        if let currentUserUID = Auth.auth().currentUser?.uid {
-            let db = Firestore.firestore()
-            
-            // Fetch the lifeQuote field in the "userInfo" collection for the current user
-            db.collection("users")
-                .document(currentUserUID)
-                .collection("userInfo")
-                .document("userInfo") // You can use a specific document ID for userInfo if needed
-                .getDocument { document, error in
-                    if let error = error {
-                        // Handle the error
-                        print("Error fetching lifeQuote: \(error.localizedDescription)")
-                        completion("") // Return an empty string in case of an error
-                    } else if let document = document, let lifeQuote = document.data()?["lifeQuote"] as? String {
-                        // Successfully fetched the lifeQuote
-                        completion(lifeQuote)
-                    } else {
-                        // No lifeQuote found
-                        completion("")
-                    }
-                }
-        }
-    }
-
-    func updateTotalQuotesCount(forUserUID userUID: String, newCount: Int) {
-        let db = Firestore.firestore()
-        
-        db.collection("users")
-            .document(userUID)
-            .collection("userInfo")
-            .document("userInfo")
-            .setData(["totalQuotes": newCount], merge: true) { error in
-                if let error = error {
-                    // Handle the error
-                    print("Error updating totalQuotes count: \(error.localizedDescription)")
-                }
-            }
-    }
-
-    
-    func fetchTotalQuotesCount(forUserUID userUID: String, completion: @escaping (Int) -> Void) {
-        let db = Firestore.firestore()
-        
-        db.collection("users")
-            .document(userUID)
-            .collection("userInfo")
-            .document("userInfo")
-            .getDocument { document, error in
-                if let error = error {
-                    // Handle the error
-                    print("Error fetching totalQuotes count: \(error.localizedDescription)")
-                    completion(0) // Return 0 in case of an error
-                } else if let document = document, let totalQuotes = document.data()?["totalQuotes"] as? Int {
-                    // Successfully fetched the totalQuotes count
-                    completion(totalQuotes)
-                } else {
-                    // No totalQuotes count found, return 0
-                    completion(0)
-                }
-            }
     }
 
 }
