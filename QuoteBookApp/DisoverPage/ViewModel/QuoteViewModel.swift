@@ -33,9 +33,7 @@ final class QuoteViewModel: ObservableObject {
     }
     
     init() {
-        fetchInitialQuotes()
-        isProblematic()
-    }
+        fetchInitialQuotes()    }
     
     func fetchInitialQuotes () -> Void{
         service.fetchInitialQuotes{ quotes in
@@ -44,34 +42,6 @@ final class QuoteViewModel: ObservableObject {
             })
             self.quotes = quotes
             print(self.quotes)
-        }
-    }
-    
-    func isProblematic() -> Void {
-        if self.quotes2.count < 3 {
-            print(self.quotes)
-            setQuotesToDay(date: findDayBefore(date: Date()))
-        } else {
-            self.quotes = self.quotes2
-        }
-        
-    }
-    
-    func setQuotesToDay(date: Date) {
-        print("DEBUG: Date considered is " + dateOf(with: date))
-        var filters = [DiscoverQuote]()
-        for quote in self.quotes {
-            print("DEBUG: Filter Began")
-            if quote.dateStamp == dateOf(with: date) {
-                print("DEBUG: I was added \(quote)")
-                filters.append(quote)
-            }
-        }
-        if filters.count < 3 && dateOf(with: date) != "2023-08-19"{
-            print(filters)
-            setQuotesToDay(date: findDayBefore(date: date))
-        } else if dateOf(with: date) == "2023-08-19" {
-            self.quotes = filters
         }
     }
     

@@ -6,7 +6,10 @@
 //
 
 import Firebase
+import FirebaseFirestoreSwift
+import FirebaseFirestore
 import Foundation
+import FirebaseCore
 
 struct QuoteService {
     func fetchInitialQuotes(completion: @escaping([DiscoverQuote]) -> Void) {

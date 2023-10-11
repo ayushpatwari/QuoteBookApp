@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseCore
 
 
 @main
@@ -21,6 +22,7 @@ struct QuoteBookAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(tabModel())
         }
     }
 }

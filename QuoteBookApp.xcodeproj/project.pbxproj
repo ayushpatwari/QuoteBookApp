@@ -25,6 +25,7 @@
 		FA31219F2AA3C56B001366F9 /* +View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31219E2AA3C56B001366F9 /* +View.swift */; };
 		FA3121A12AA3C5EF001366F9 /* EditQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */; };
 		FA3121A42AA42056001366F9 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = FA3121A32AA42056001366F9 /* HalfASheet */; };
+		FA3BCD022AD71F55002D19B7 /* tabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BCD012AD71F55002D19B7 /* tabModel.swift */; };
 		FA3F4A092A4C73E60003E18B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A082A4C73E60003E18B /* ContentView.swift */; };
 		FA3F4A0B2A4C73E70003E18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */; };
 		FA3F4A0E2A4C73E70003E18B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F4A0D2A4C73E70003E18B /* Preview Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteView.swift; sourceTree = "<group>"; };
 		FA31219E2AA3C56B001366F9 /* +View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+View.swift"; sourceTree = "<group>"; };
 		FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuoteView.swift; sourceTree = "<group>"; };
+		FA3BCD012AD71F55002D19B7 /* tabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabModel.swift; sourceTree = "<group>"; };
 		FA3F4A032A4C73E60003E18B /* QuoteBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3F4A082A4C73E60003E18B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				FA84006A2AD3874700E9AE74 /* YoungSerif-Regular.ttf */,
 				FA26230A2AD2419E000AEC40 /* GrandifloraOne-Regular.ttf */,
 				FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */,
+				FA3BCD012AD71F55002D19B7 /* tabModel.swift */,
 				FA89AF4B2AA67F05005778BE /* GoogleService-Info.plist */,
 				FA3F4A082A4C73E60003E18B /* ContentView.swift */,
 				FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */,
@@ -474,6 +477,7 @@
 				FA89AF392AA657AC005778BE /* LoginScreen.swift in Sources */,
 				FA2D8BDD2A6EFCF7000EE10C /* tab bar.swift in Sources */,
 				FADAEF1D2A7948EB00F246EE /* QuoteBookAppApp.swift in Sources */,
+				FA3BCD022AD71F55002D19B7 /* tabModel.swift in Sources */,
 				FA3121832AA3A1EF001366F9 /* QuoteViewModel.swift in Sources */,
 				FA31217A2AA39EDA001366F9 /* DiscoverPage.swift in Sources */,
 				FA31218F2AA3C341001366F9 /* TimeFormatting.swift in Sources */,

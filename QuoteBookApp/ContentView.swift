@@ -11,8 +11,9 @@ import SwiftUI
 struct ContentView: View
 {
     @State private var addCollection = false
+    @StateObject var viewModel: MyModel = MyModel()
     
-    
+    @EnvironmentObject var tabModel: tabModel
 //    @EnvironmentObject var viewModel : AuthViewModel
     
     
@@ -20,7 +21,20 @@ struct ContentView: View
     
     
     var body : some View {
-        CollectionsView()
+        
+        
+        if tabModel.selectedTab == "discover"
+        {
+            DiscoverPage()
+        }
+        else if tabModel.selectedTab == "collection"
+        {
+            CollectionsView()
+        }
+        else if tabModel.selectedTab == "library"
+        {
+            LibraryView()
+        }
     }
 }
 

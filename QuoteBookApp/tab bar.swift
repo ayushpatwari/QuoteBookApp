@@ -9,6 +9,32 @@
 
 import SwiftUI
 
+
+class MyModel: ObservableObject {
+    @Published var selectedDisc: Bool = false
+    @Published var selectedLib: Bool = false
+    @Published var selectedCol: Bool = true
+
+    
+    func toDiscover() {
+        selectedDisc = true
+        selectedLib = false
+        selectedCol = false
+    }
+    
+    func toLibrary() {
+        selectedDisc = false
+        selectedLib = true
+        selectedCol = false
+    }
+    
+    func toCollections() {
+        selectedDisc = false
+        selectedLib = false
+        selectedCol = true
+    }
+}
+
 enum Tabs: Int {
     case collections = 0
     case discover = 1
@@ -20,10 +46,13 @@ enum Tabs: Int {
 struct TabBar: View {
     @State private var selectedTab: Tabs = .discover
     
+    @EnvironmentObject var viewModel: tabModel
+    
     @State private var animateDiscover = false
     @State private var animateCollections = false
     @State private var animateLibrary = false
     @State private var animateProfile = false
+
     
     
     
@@ -51,11 +80,14 @@ struct TabBar: View {
                             if selectedTab == .discover{
                                 indicator()
                                 
+                                
                             }
                             
                             Button {
                                 selectedTab = .discover
                                 animateDiscover.toggle()
+                                viewModel.selectedTab = "discover"
+                                
                             } label: {
                                 Image(systemName: "safari")
                                     .resizable()
@@ -77,7 +109,8 @@ struct TabBar: View {
                             }
                             Button {
                                 selectedTab = .collections
-                                
+                                viewModel.selectedTab = "collection"
+
                             } label: {
                                 // 💩 "square.filled.on.square" or "square.text.square"
                                 Image(systemName: "square.on.square")
@@ -148,7 +181,8 @@ struct TabBar: View {
                             }
                             Button {
                                 selectedTab = .library
-                                
+                                viewModel.selectedTab = "library"
+
                             } label: {
                                 //💩 "book.closed.circle"
                                 Image(systemName: "book.closed")
