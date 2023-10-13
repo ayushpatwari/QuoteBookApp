@@ -12,6 +12,8 @@ struct LibraryView: View {
     
     @ObservedObject var model = LibraryViewModel()
     
+    @EnvironmentObject var addQuote : fabIconClass
+    
     @State private var showingAddView = false
     @State var refresh = Refresh(started: false, released: false)
     

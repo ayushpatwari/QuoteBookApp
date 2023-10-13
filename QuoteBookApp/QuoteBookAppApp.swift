@@ -23,6 +23,7 @@ struct QuoteBookAppApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(tabModel())
+                .environmentObject(fabIconClass())
         }
     }
 }

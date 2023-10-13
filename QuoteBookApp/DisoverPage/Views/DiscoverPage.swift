@@ -14,7 +14,8 @@ struct DiscoverPage: View {
     @State var searchText: String = ""
     
     var body: some View {
-        ZStack {
+        ZStack 
+        {
             VStack {
                 GeometryReader { proxy in
                     let size = proxy.frame(in: .global)
@@ -59,6 +60,9 @@ struct DiscoverPage: View {
                     .opacity(0.6)
             }
             .padding(.horizontal, 4)
+            
+            
+            TabBar()
         }
     }
         

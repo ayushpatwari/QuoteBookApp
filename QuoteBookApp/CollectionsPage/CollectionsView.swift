@@ -18,12 +18,13 @@ class quoteSelection : ObservableObject
 struct CollectionsView: View
 {
     @ObservedObject var model = ViewModel()
+    @EnvironmentObject  var addCollectionClass : fabIconClass
+    
+    
 
     
     @Namespace private var animation
     
-    
-    @State private var addCollection = false
     @State private var chooseQuotes = false
     
     let uiscreen = UIScreen.main.bounds
@@ -33,7 +34,7 @@ struct CollectionsView: View
         
         ZStack{
             
-            if (addCollection == false)
+            if (addCollectionClass.addCollection == false)
             {
                 VStack(alignment: .center)
                 {
@@ -57,39 +58,22 @@ struct CollectionsView: View
                             }
                         }
                     }
-                    
-                    //button to add a new collection
-                        
-                        Button() {
-                            withAnimation(.spring())
-                            {
-                                addCollection.toggle()
-                            }
-                            
-                        } label: {
-                            Image(systemName: "plus.circle")
-                                .resizable()
-                                .foregroundColor(.blue)
-                                .frame(width: 65, height: 65, alignment: .trailing)
-                        }
-                        .frame(width: self.uiscreen.width - self.uiscreen.width/9, alignment: .bottomTrailing)
-                        .padding()
-                        .padding(.horizontal)
-                    Spacer()
                 }
                 .frame(width: self.uiscreen.width, alignment: .center)
-                .blur(radius: (addCollection ? 20 : 0))
+                .blur(radius: (addCollectionClass.addCollection ? 20 : 0))
             }
-            if (addCollection == false)
+            if (addCollectionClass.addCollection == false)
             {
+                
                 TabBar()
+                
             }
 
             
-            if (addCollection)
+            if (addCollectionClass.addCollection)
             {
                 withAnimation(.bouncy()) {
-                    AddCollectionView(addCollection: $addCollection, choosingQuotes: $chooseQuotes)
+                    AddCollectionView(choosingQuotes: $chooseQuotes)
                         .frame(maxWidth: (chooseQuotes ? self.uiscreen.width/1.1 : self.uiscreen.width/1.25), maxHeight: (chooseQuotes ? self.uiscreen.height/1.175 : self.uiscreen.height/1.9)  )
                         .background(
                             Color("Color"))
@@ -114,8 +98,8 @@ struct CollectionsView: View
 struct AddCollectionView: View
 {
     @StateObject private var selectedQuotes = quoteSelection()
+    @EnvironmentObject var addCollectionClass : fabIconClass
     @State private var initalColor : Color = .clear
-    @Binding var addCollection : Bool
     @ObservedObject var model = ViewModel()
     @State private var name  = ""
     @Binding var choosingQuotes : Bool
@@ -154,12 +138,14 @@ struct AddCollectionView: View
                                 choosingQuotes.toggle()
                             }
                         }
+                        
+                        //we need to add
                         ColorPicker("ColorPicker", selection: $initalColor, supportsOpacity: false)
                                 .labelsHidden()
                         Button("Done"){
                             withAnimation (.spring()){
                                 model.addCollection(Name: name, color: initalColor.toHex() ?? "N/A", quoteSelected: selectedQuotes.selectedQuotes)
-                                addCollection.toggle()
+                                addCollectionClass.addCollection.toggle()
                             }
                         }
                     }

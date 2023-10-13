@@ -251,11 +251,3 @@ struct Shake: GeometryEffect {
                                               y: 0))
     }
 }
-
-
-
-struct AddQuoteView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddQuoteView()
-    }
-}

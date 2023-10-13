@@ -35,6 +35,11 @@ class MyModel: ObservableObject {
     }
 }
 
+class fabIconClass : ObservableObject {
+    @Published var addCollection : Bool = false
+    @Published var addQuote : Bool = false
+}
+
 enum Tabs: Int {
     case collections = 0
     case discover = 1
@@ -44,9 +49,10 @@ enum Tabs: Int {
 }
 
 struct TabBar: View {
-    @State private var selectedTab: Tabs = .discover
+    @State private var selectedTab: Tabs = .collections
     
     @EnvironmentObject var viewModel: tabModel
+    @EnvironmentObject var addCollection : fabIconClass
     
     @State private var animateDiscover = false
     @State private var animateCollections = false
@@ -79,8 +85,6 @@ struct TabBar: View {
                             
                             if selectedTab == .discover{
                                 indicator()
-                                
-                                
                             }
                             
                             Button {
@@ -142,11 +146,16 @@ struct TabBar: View {
                                                 .foregroundColor(.white)
                                         }
                                         if selectedTab == .collections{
-                                            Image(systemName: "plus.square.on.square")
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(width: 24, height: 24)
-                                                .foregroundColor(.white)
+                                            Button
+                                            {
+                                                addCollection.addCollection.toggle()
+                                            } label: {
+                                                Image(systemName: "plus.square.on.square")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: 24, height: 24)
+                                                    .foregroundColor(.white)
+                                            }
                                         }
                                         //💩 replace with  "pencil.and.scrible" or quote.opening
                                         if selectedTab == .library{

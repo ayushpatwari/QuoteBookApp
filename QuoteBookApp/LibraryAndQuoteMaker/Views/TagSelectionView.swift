@@ -15,9 +15,3 @@ struct TagSelectionView: View {
         .offset(x: 0, y: 40)
     }
 }
-
-struct TagSelectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        TagSelectionView()
-    }
-}
