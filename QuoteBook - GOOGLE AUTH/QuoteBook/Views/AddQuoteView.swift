@@ -4,6 +4,7 @@
 
 import SwiftUI
 import HalfASheet
+import OmenTextField
 
 struct AddQuoteView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -20,221 +21,299 @@ struct AddQuoteView: View {
     @State private var isPublic = false
     @State private var tagsIsSelected = true
     @State private var showingTagSelectionView = false
+    @State private var color : Color = .clear
     
     @State private var showingAddView = false
     @State private var isExpanded = false
     @State private var selectedNum = 1
     
     init() {
+        
         UITableView.appearance().contentInset.top = -25
         UITableView.appearance().backgroundColor = .clear
+    
+        
     }
     
     
     var body: some View {
         ZStack{
-        VStack (alignment: .leading) {
-            HStack{ // for "Create a new quote" and +
-                Text("Create new quote")
-                    .bold()
-                    .multilineTextAlignment(.trailing)
-                    .font(.title3)
-                
-                Spacer()
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    ZStack {
-                        Circle()
-                            .foregroundColor(Color(#colorLiteral(red: 0.9489397407, green: 0.9490725398, blue: 0.948897779, alpha: 1)))
-                            .frame(width: 30, height: 30)
-                        
-                        Image(systemName: "multiply")
-                            .font(.system(size: 17))
-                            .foregroundColor(.black)
-                    }
-                }
-                
-                
-            }
-            .padding()
+            Color("Primary")
+                .ignoresSafeArea()
             
-            VStack(alignment: .leading){
-                Text("Quote")
-                    .bold()
-                    .font(.callout)
-                    .foregroundColor(.gray)
-                HStack{
-                    Image(systemName: "text.quote")
-                        .padding(.leading)
-                        .opacity(0.5)
+            VStack (alignment: .leading) {
+                HStack{ // for "Create a new quote" and +
+                    Text("Create new quote")
+                        .bold()
+                        .multilineTextAlignment(.trailing)
+                        .font(.custom("JosefinSans-Regular", size: 23))
+
                     
-                    TextField("Quote", text: $content /*, axis: .vertical 💩*/)
-                        .frame(height: 50)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .padding([.horizontal])
-                        .padding([.horizontal], 0)
-                    
-                }
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(emptyContent == true ? Color.red : Color.gray))
-                .modifier(Shake(animatableData: CGFloat(numberOfShakes)))
-                
-                if(emptyContent == true){
-                    Text("Quote is too short")
-                        .foregroundColor(.red)
-                        .font(.callout)
-                }
-                
-                Text("Author")
-                    .bold()
-                    .font(.callout)
-                    .foregroundColor(.gray)
-                HStack{
-                    Image(systemName: "person.fill")
-                        .padding(.leading)
-                        .opacity(0.5)
-                    
-                    TextField("Author", text: $author)
-                        .frame(height: 50)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .padding([.horizontal])
-                        .padding([.horizontal], 0)
-                }
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
-                
-                
-                Text("Properties")
-                    .bold()
-                    .font(.callout)
-                    .foregroundColor(.gray)
-                    .padding(.top, 10)
-                Form{
-                    Section{
-                        
-                        HStack{
-                            Image(systemName: "tag.fill")
-                                .scaleEffect(x: -1, y: 1)
-                            Text("Label")
-                            
-                            Spacer()
-                            //MARK: CURRENT WORKSPACE
-                                Button {
-                                    showingTagSelectionView.toggle()
-                                } label: {
-                                    HStack{
-                                    Image(systemName: "plus")
-                                    
-                                        if tagsIsSelected == false {
-                                            Text("Add Tag")
-                                            .bold()
-                                        }
-                                    }
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .background(Color.blue)
-                                    .frame(height: 36)
-                                    .cornerRadius(18)
-                                    .overlay(Capsule().stroke(Color.blue, lineWidth: 1))
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                            
-                            
-                        }
-                        
-                        
-                        HStack{
-                            Image(systemName: "eyedropper")
-                            Text("Color")
-                            
-                            Spacer()
-                            
-                        }
-                        
-                        HStack{
-                            Image(systemName: visibility ? "eye" : "eye.slash")
-                            
-                            Toggle(isOn: $visibility) {
-                                Text(visibility ? "Public" : "Private")
-                            }
-                            
-                            
-                            Spacer()
-                            
-                        }
-                        
-                    }
-                    .cornerRadius(25)
-                    .listRowBackground(Color(#colorLiteral(red: 0.9564508796, green: 0.9647257924, blue: 0.9727186561, alpha: 1)))
-                }
-            }
-            .padding()
-            
-            if visibility {
-                Text("Note: This quote will be made public to everyone - it cannot be made private once published.")
-                    .font(.footnote)
-                    .foregroundColor(.gray)
-                    .padding(.horizontal, 20)
-                    .multilineTextAlignment(.center)
-            }
-            
-            HStack {
-                Spacer()
-                let trimmedContent = content.trimmingCharacters(in: .whitespacesAndNewlines)
-                let words = trimmedContent.split(separator: " ")
-                
-                
-                if words.count <= 3 {
+                    Spacer()
                     Button {
-                        withAnimation(.default) {
-                            self.numberOfShakes += 1
-                        }
-                        emptyContent = true
-                    } label: {
-                        Text("Submit")
-                            .bold()
-                            .foregroundColor(.white)
-                            .frame(height: 50)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .cornerRadius(25)
-                            .padding()
-                    }
-                } else {
-                    Button {
-                        if author.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                            author = "Unknown"
-                        }
-                        
-                        emptyContent = false
-                        
-                        if visibility == true{
-                            isPublic = true
-                        }
-                        
-                        model.addData(author: author, content: content, visibility: visibility)
-                        
                         presentationMode.wrappedValue.dismiss()
                     } label: {
-                        Text("Submit")
-                            .bold()
-                            .foregroundColor(.white)
-                            .frame(height: 50)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .cornerRadius(25)
-                            .padding()
+                        ZStack {
+                            Circle()
+                                .foregroundColor(Color(#colorLiteral(red: 0.9489397407, green: 0.9490725398, blue: 0.948897779, alpha: 1)))
+                                .frame(width: 30, height: 30)
+                            
+                            Image(systemName: "multiply")
+                                .font(.system(size: 17))
+                                .foregroundColor(.black)
+                        }
                     }
+                    
+                    
+                }
+                .padding()
+                
+                VStack(alignment: .leading){
+                    Text("Quote")
+                        .bold()
+                        .font(.custom("JosefinSans-Regular", size: 20))
+                    HStack{
+                        Image(systemName: "text.quote")
+                            .padding(.leading)
+                            .opacity(0.5)
+                        
+                        OmenTextField("Quote", text: $content /*, axis: .vertical 💩*/)
+                            .font(.callout)
+                            .frame(height: 50)
+                            .textFieldStyle(PlainTextFieldStyle())
+                            .padding([.horizontal])
+                            .padding([.horizontal], 0)
+                        
+                    }
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(emptyContent == true ? Color.red : Color.primary))
+                    .modifier(Shake(animatableData: CGFloat(numberOfShakes)))
+                    
+                    if(emptyContent == true){
+                        Text("Quote is too short")
+                            .foregroundColor(.red)
+                            .font(.callout)
+                    }
+                    
+                    Text("Author")
+                        .bold()
+                        .font(.custom("JosefinSans-Regular", size: 20))
+                    HStack{
+                        Image(systemName: "person.fill")
+                            .padding(.leading)
+                            .opacity(0.5)
+                        
+                        OmenTextField("Author", text: $author)
+                            .font(.callout)
+                            .frame(height: 50)
+                            .textFieldStyle(PlainTextFieldStyle())
+                            .padding([.horizontal])
+                            .padding([.horizontal], 0)
+                    }
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.primary))
+                    Text("Properties")
+                        .bold()
+                        .font(.custom("JosefinSans-Regular", size: 20))
+                        .padding(.top, 10)
+                    if #available(iOS 16.0, *) {
+                        Form{
+                            Section{
+                                
+                                HStack{
+                                    Image(systemName: "tag.fill")
+                                        .scaleEffect(x: -1, y: 1)
+                                    Text("Label")
+                                        .font(.custom("JosefinSans-Regular", size: 20))
+                                    
+                                    Spacer()
+                                    //MARK: CURRENT WORKSPACE
+                                    Button {
+                                        showingTagSelectionView.toggle()
+                                    } label: {
+                                        HStack{
+                                            Image(systemName: "plus")
+                                            
+                                            if tagsIsSelected == false {
+                                                Text("Add Tag")
+                                                    .bold()
+                                            }
+                                        }
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .frame(height: 36)
+                                        .cornerRadius(18)
+                                        .overlay(Capsule().stroke(Color.blue, lineWidth: 1))
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                    
+                                    
+                                }
+                                
+                                
+                                HStack{
+                                    Image(systemName: "eyedropper")
+                                    Text("Color")
+                                        .font(.custom("JosefinSans-Regular", size: 20))
+                                    
+                                    Spacer()
+                                    
+                                    ColorPicker("", selection: $color, supportsOpacity: false)
+                                }
+                                
+                                HStack{
+                                    Image(systemName: visibility ? "eye" : "eye.slash")
+                                    
+                                    Toggle(isOn: $visibility) {
+                                        Text(visibility ? "Public" : "Private")
+                                            .font(.custom("JosefinSans-Regular", size: 20))
+                                    }
+                                    
+                                    
+                                    Spacer()
+                                    
+                                }
+                                
+                            }
+                            .cornerRadius(25)
+                        }
+                        .scrollContentBackground(.hidden)
+                    } else {
+                        Form{
+                            Section{
+                                
+                                HStack{
+                                    Image(systemName: "tag.fill")
+                                        .scaleEffect(x: -1, y: 1)
+                                    Text("Label")
+                                        .font(.custom("JosefinSans-Regular", size: 20))
+                                    
+                                    Spacer()
+                                    //MARK: CURRENT WORKSPACE
+                                    Button {
+                                        showingTagSelectionView.toggle()
+                                    } label: {
+                                        HStack{
+                                            Image(systemName: "plus")
+                                            
+                                            if tagsIsSelected == false {
+                                                Text("Add Tag")
+                                                    .bold()
+                                            }
+                                        }
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .frame(height: 36)
+                                        .cornerRadius(18)
+                                        .overlay(Capsule().stroke(Color.blue, lineWidth: 1))
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                    
+                                    
+                                }
+                                
+                                
+                                HStack{
+                                    Image(systemName: "eyedropper")
+                                    Text("Color")
+                                        .font(.custom("JosefinSans-Regular", size: 20))
+                                    
+                                    Spacer()
+                                  
+                                    ColorPicker("", selection: $color, supportsOpacity: false)
+                                }
+                                
+                                HStack{
+                                    Image(systemName: visibility ? "eye" : "eye.slash")
+                                    
+                                    Toggle(isOn: $visibility) {
+                                        Text(visibility ? "Public" : "Private")
+                                            .font(.custom("JosefinSans-Regular", size: 20))
+                                    }
+                                    
+                                    
+                                    Spacer()
+                                    
+                                }
+                                
+                            }
+                            .cornerRadius(25)
+                        }
+                    }
+
+                }
+                .padding()
+
+                if visibility {
+                    Text("Note: This quote will be made public to everyone - it cannot be made private once published.")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .padding(.horizontal, 20)
+                        .multilineTextAlignment(.center)
                 }
                 
-                Spacer()
+                HStack {
+                    Spacer()
+                    let trimmedContent = content.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let words = trimmedContent.split(separator: " ")
+                    
+                    
+                    if words.count <= 3 {
+                        Button {
+                            withAnimation(.default) {
+                                self.numberOfShakes += 1
+                            }
+                            emptyContent = true
+                        } label: {
+                            Text("Submit")
+                                .font(.custom("YoungSerif-Regular", size: 23))
+                                .foregroundColor(Color("Primary"))
+                                .frame(height: 50)
+                                .frame(maxWidth: .infinity)
+                                .background(Color.blue)
+                                .cornerRadius(25)
+                                .padding()
+                        }
+                    } else {
+                        Button {
+                            if author.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                author = "Unknown"
+                            }
+                            
+                            emptyContent = false
+                            
+                            if visibility == true{
+                                isPublic = true
+                            }
+                            
+                            if color == .clear {
+                                    color = randomColor()
+                                }
+                            
+                            model.addData(author: author, content: content, visibility: visibility, color: color.toHex() ?? "N/A")
+                            
+                            presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Text("Submit")
+                                .bold()
+                                .foregroundColor(.white)
+                                .frame(height: 50)
+                                .frame(maxWidth: .infinity)
+                                .background(Color.blue)
+                                .cornerRadius(25)
+                                .padding()
+                        }
+                    }
+                    
+                    Spacer()
+                }
+                
             }
-            
-        }
             HalfASheet(isPresented: $showingTagSelectionView, title: "Tags (3 per quote)") {
                 TagSelectionView()
             }
             .height(.proportional(0.58))
-    }
+        }
     }
 }
 
@@ -249,6 +328,13 @@ struct Shake: GeometryEffect {
                                                 amount * sin(animatableData * .pi * CGFloat(shakesPerUnit)),
                                               y: 0))
     }
+}
+
+func randomColor() -> Color {
+    let red = Double.random(in: 0...1)
+    let green = Double.random(in: 0...1)
+    let blue = Double.random(in: 0...1)
+    return Color(red: red, green: green, blue: blue)
 }
 
 

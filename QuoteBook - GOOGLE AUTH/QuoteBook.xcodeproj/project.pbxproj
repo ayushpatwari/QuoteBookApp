@@ -20,7 +20,6 @@
 		376375432A71ABD7007969C9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 376375422A71ABD7007969C9 /* FirebaseAuth */; };
 		376375492A71C667007969C9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 376375482A71C667007969C9 /* GoogleSignIn */; };
 		3763754B2A71C667007969C9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3763754A2A71C667007969C9 /* GoogleSignInSwift */; };
-		377346162A99CA990040DB93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377346152A99CA990040DB93 /* GoogleService-Info.plist */; };
 		3773461B2A99CFFE0040DB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773461A2A99CFFE0040DB93 /* AppDelegate.swift */; };
 		377346202A99D1330040DB93 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3773461F2A99D1330040DB93 /* LoginScreen.swift */; };
 		377346252A99D1660040DB93 /* GoogleSiginBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377346242A99D1660040DB93 /* GoogleSiginBtn.swift */; };
@@ -33,8 +32,16 @@
 		37A3AB232A70E38E00F04FB7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 37A3AB222A70E38E00F04FB7 /* FirebaseAnalytics */; };
 		37A3AB252A70E38E00F04FB7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 37A3AB242A70E38E00F04FB7 /* FirebaseAnalyticsSwift */; };
 		37EECEDE2A847B24006ADC26 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EECEDD2A847B24006ADC26 /* TagView.swift */; };
-		C965A31B2AA4048B005E34AC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C965A31A2AA4048B005E34AC /* ProfileView.swift */; };
 		C965A33A2AA41F07005E34AC /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C965A3392AA41F07005E34AC /* SDWebImageSwiftUI */; };
+		C9B1A3862ACA867D001BA765 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9B1A3852ACA867D001BA765 /* GoogleService-Info.plist */; };
+		C9BCD0F72AD4ACF400219491 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9BCD0F62AD4ACF400219491 /* JosefinSans-SemiBold.ttf */; };
+		C9BCD0F92AD4B0E900219491 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9BCD0F82AD4B0E900219491 /* JosefinSans-Light.ttf */; };
+		C9BCD0FB2AD71A3D00219491 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9BCD0FA2AD71A3D00219491 /* JosefinSans-Bold.ttf */; };
+		C9BCD0FD2AD71C3F00219491 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9BCD0FC2AD71C3F00219491 /* JosefinSans-Italic.ttf */; };
+		C9BCD0FF2AD7225900219491 /* ColorSwitching.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BCD0FE2AD7225900219491 /* ColorSwitching.swift */; };
+		C9BCD1012AD76B4A00219491 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BCD1002AD76B4A00219491 /* TabBar.swift */; };
+		C9CE446E2AD49378006FE663 /* YoungSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9CE446D2AD49378006FE663 /* YoungSerif-Regular.ttf */; };
+		C9CE44702AD49496006FE663 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9CE446F2AD49496006FE663 /* JosefinSans-Regular.ttf */; };
 		C9FBAB002AA55D6C003E8553 /* OmenTextField in Frameworks */ = {isa = PBXBuildFile; productRef = C9FBAAFF2AA55D6C003E8553 /* OmenTextField */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +71,6 @@
 		372F83012A5A3939007FA7F8 /* EditQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuoteView.swift; sourceTree = "<group>"; };
 		372F83092A5A479B007FA7F8 /* AddQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteView.swift; sourceTree = "<group>"; };
 		376375832A7228C6007969C9 /* QuoteBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuoteBook.entitlements; sourceTree = "<group>"; };
-		377346152A99CA990040DB93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3773461A2A99CFFE0040DB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3773461F2A99D1330040DB93 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		377346242A99D1660040DB93 /* GoogleSiginBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSiginBtn.swift; sourceTree = "<group>"; };
@@ -81,7 +87,15 @@
 		3787F4282A4F69D3004D1F7C /* QuoteBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookUITests.swift; sourceTree = "<group>"; };
 		3787F42A2A4F69D3004D1F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37EECEDD2A847B24006ADC26 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		C965A31A2AA4048B005E34AC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C9B1A3852ACA867D001BA765 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9BCD0F62AD4ACF400219491 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-SemiBold.ttf"; path = "../../../Josefin_Sans/static/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		C9BCD0F82AD4B0E900219491 /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Light.ttf"; path = "../../../Josefin_Sans/static/JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		C9BCD0FA2AD71A3D00219491 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Bold.ttf"; path = "../../../Josefin_Sans/static/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		C9BCD0FC2AD71C3F00219491 /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Italic.ttf"; path = "../../../Josefin_Sans/static/JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
+		C9BCD0FE2AD7225900219491 /* ColorSwitching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorSwitching.swift; path = ../../../../ColorSwitching.swift; sourceTree = "<group>"; };
+		C9BCD1002AD76B4A00219491 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		C9CE446D2AD49378006FE663 /* YoungSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "YoungSerif-Regular.ttf"; path = "../../../Young_Serif/YoungSerif-Regular.ttf"; sourceTree = "<group>"; };
+		C9CE446F2AD49496006FE663 /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Regular.ttf"; path = "../../../Josefin_Sans/static/JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +143,7 @@
 				3773461A2A99CFFE0040DB93 /* AppDelegate.swift */,
 				377346242A99D1660040DB93 /* GoogleSiginBtn.swift */,
 				3773462C2A99D2700040DB93 /* +View.swift */,
+				C9BCD0FE2AD7225900219491 /* ColorSwitching.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -141,7 +156,7 @@
 				372F83012A5A3939007FA7F8 /* EditQuoteView.swift */,
 				3728E49F2A81B73B00BE6216 /* TagSelectionView.swift */,
 				3773461F2A99D1330040DB93 /* LoginScreen.swift */,
-				C965A31A2AA4048B005E34AC /* ProfileView.swift */,
+				C9BCD1002AD76B4A00219491 /* TabBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,8 +193,14 @@
 			isa = PBXGroup;
 			children = (
 				376375832A7228C6007969C9 /* QuoteBook.entitlements */,
-				377346152A99CA990040DB93 /* GoogleService-Info.plist */,
 				3787F40B2A4F69D2004D1F7C /* QuoteBookApp.swift */,
+				C9B1A3852ACA867D001BA765 /* GoogleService-Info.plist */,
+				C9CE446D2AD49378006FE663 /* YoungSerif-Regular.ttf */,
+				C9BCD0F82AD4B0E900219491 /* JosefinSans-Light.ttf */,
+				C9BCD0F62AD4ACF400219491 /* JosefinSans-SemiBold.ttf */,
+				C9BCD0FA2AD71A3D00219491 /* JosefinSans-Bold.ttf */,
+				C9BCD0FC2AD71C3F00219491 /* JosefinSans-Italic.ttf */,
+				C9CE446F2AD49496006FE663 /* JosefinSans-Regular.ttf */,
 				372F82E42A58DC8A007FA7F8 /* Helpers */,
 				372F82E52A58DC92007FA7F8 /* Views */,
 				3787F40F2A4F69D3004D1F7C /* Assets.xcassets */,
@@ -338,9 +359,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CE446E2AD49378006FE663 /* YoungSerif-Regular.ttf in Resources */,
+				C9BCD0FB2AD71A3D00219491 /* JosefinSans-Bold.ttf in Resources */,
+				C9BCD0F72AD4ACF400219491 /* JosefinSans-SemiBold.ttf in Resources */,
 				3787F4132A4F69D3004D1F7C /* Preview Assets.xcassets in Resources */,
 				3787F4102A4F69D3004D1F7C /* Assets.xcassets in Resources */,
-				377346162A99CA990040DB93 /* GoogleService-Info.plist in Resources */,
+				C9CE44702AD49496006FE663 /* JosefinSans-Regular.ttf in Resources */,
+				C9B1A3862ACA867D001BA765 /* GoogleService-Info.plist in Resources */,
+				C9BCD0F92AD4B0E900219491 /* JosefinSans-Light.ttf in Resources */,
+				C9BCD0FD2AD71C3F00219491 /* JosefinSans-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,13 +398,14 @@
 				372F82F22A58DFB1007FA7F8 /* TimeFormatting.swift in Sources */,
 				372F82FA2A5913EC007FA7F8 /* ContentView.swift in Sources */,
 				3773462D2A99D2700040DB93 /* +View.swift in Sources */,
+				C9BCD0FF2AD7225900219491 /* ColorSwitching.swift in Sources */,
 				372697592A7305310054EC95 /* Quote.swift in Sources */,
 				372F83022A5A3939007FA7F8 /* EditQuoteView.swift in Sources */,
+				C9BCD1012AD76B4A00219491 /* TabBar.swift in Sources */,
 				372697612A7306220054EC95 /* ViewModel.swift in Sources */,
 				3787F40C2A4F69D2004D1F7C /* QuoteBookApp.swift in Sources */,
 				3773461B2A99CFFE0040DB93 /* AppDelegate.swift in Sources */,
 				377346202A99D1330040DB93 /* LoginScreen.swift in Sources */,
-				C965A31B2AA4048B005E34AC /* ProfileView.swift in Sources */,
 				3728E4A02A81B73B00BE6216 /* TagSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

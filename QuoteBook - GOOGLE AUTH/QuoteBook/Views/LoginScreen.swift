@@ -12,43 +12,73 @@ import Firebase
 
 struct LoginScreen: View {
     var body: some View {
-        VStack{
-            GoogleSiginBtn {
-                guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        ZStack{
+            Color("Primary")
+                .ignoresSafeArea()
+        GeometryReader { geometry in
+            VStack{
                 
-                let config = GIDConfiguration(clientID: clientID)
                 
-                GIDSignIn.sharedInstance.configuration = config
+                Image("Quotation Mark Image")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: geometry.size.width, height: geometry.size.height * 0.5)
+                    .cornerRadius(50)
+                    .ignoresSafeArea()
                 
-                GIDSignIn.sharedInstance.signIn(withPresenting: getRootViewController()) { signResult, error in
+                Text("Welcome!")
+                    .font(.custom("YoungSerif-Regular", size: 50))
+                    .bold()
+                GoogleSiginBtn {
+                    guard let clientID = FirebaseApp.app()?.options.clientID else { return }
                     
-                    if let error = error {
-                        //...
-                        return
-                    }
+                    let config = GIDConfiguration(clientID: clientID)
                     
-                    guard let user = signResult?.user,
-                          let idToken = user.idToken else { return }
+                    GIDSignIn.sharedInstance.configuration = config
                     
-                    let accessToken = user.accessToken
-                    
-                    let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: accessToken.tokenString)
-                    
-                    // Use the credential to authenticate with Firebase
-                    
-                    Auth.auth().signIn(with: credential) { signResult, error in
-                        guard error == nil else {
+                    GIDSignIn.sharedInstance.signIn(withPresenting: getRootViewController()) { signResult, error in
+                        
+                        if let error = error {
+                            //...
                             return
                         }
-                        guard let userID = signResult?.user.uid else { return }
-                        print(userID)
-
-                        print("SIGN IN")
-                        UserDefaults.standard.set(true, forKey: "signIn")
+                        
+                        guard let user = signResult?.user,
+                              let idToken = user.idToken else { return }
+                        
+                        let accessToken = user.accessToken
+                        
+                        let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString, accessToken: accessToken.tokenString)
+                        
+                        // Use the credential to authenticate with Firebase
+                        
+                        Auth.auth().signIn(with: credential) { signResult, error in
+                            guard error == nil else {
+                                return
+                            }
+                            guard let userID = signResult?.user.uid else { return }
+                            print(userID)
+                            
+                            print("SIGN IN")
+                            UserDefaults.standard.set(true, forKey: "signIn")
+                        }
+                        
                     }
                     
                 }
+                .padding()
                 
+            }
+        }
+    }
+    }
+    
+    init(){
+        for familyName in UIFont.familyNames {
+            print(familyName)
+            
+            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+                print("-- \(fontName)")
             }
         }
     }

@@ -15,4 +15,5 @@ struct Quote: Identifiable {
     var likes: Int
     var createdAt: Date
     var visibility: Bool
+    var color: String
 }
