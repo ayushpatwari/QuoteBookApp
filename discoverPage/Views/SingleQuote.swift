@@ -11,6 +11,7 @@ import Firebase
 struct SingleQuote: View {
     @ObservedObject var viewModel = QuoteViewModel()
     @State var quote: Quote
+    @State private var isLiked = false
     let screen = UIScreen.main.bounds
 
     var body: some View{
@@ -25,6 +26,12 @@ struct SingleQuote: View {
                     .frame(width: .infinity, height: .infinity)
                         .aspectRatio(contentMode: .fill)
                         .ignoresSafeArea()
+                        .onTapGesture (count: 2) {
+                            viewModel.likeQuote(quote: quote)
+                            viewModel.checkIfUserLiked(quote: quote) { result in
+                                self.isLiked = result
+                            }
+                        }
                 VStack (spacing: 40) {
                     Spacer()
                     Text(quote.content)
@@ -41,10 +48,18 @@ struct SingleQuote: View {
                         //Like -> Depending on status of IfLiked this will fire
                         Button {
                             viewModel.likeQuote(quote: quote)
+                            viewModel.checkIfUserLiked(quote: quote) { result in
+                                self.isLiked = result
+                            }
                         } label: {
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(Color.white)
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .foregroundColor(isLiked ? .pink : .white)
                                 .font(.title2)
+                                .onAppear {
+                                    viewModel.checkIfUserLiked(quote: quote) { result in
+                                        self.isLiked = result
+                                    }
+                                }
                             
                         }
                         Button {
@@ -70,6 +85,7 @@ struct SingleQuote: View {
                 }
                                 
                             }
+            
             .ignoresSafeArea()
             .frame(width: geometry.size.width, height: geometry.size.height)
             }

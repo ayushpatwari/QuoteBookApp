@@ -26,9 +26,7 @@ struct ContentView: View {
                                 .rotationEffect(.init(degrees: -90))
                                 .ignoresSafeArea(.all, edges:.top)
                                 .frame(height: size.height)
-                                .onTapGesture (count: 2) {
-                                    viewModel.likeQuote(quote: quote)
-                                }
+                                
                         }
                         .ignoresSafeArea()
                     }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
@@ -63,26 +61,10 @@ struct ContentView: View {
                 }
             }
             .padding(.horizontal, 4)
-            Text("Profile")
-                .frame(width:50)
-                .offset(x:50, y:-350)
-                .font(.subheadline)
             Circle()
                 .frame(width:75, height: 75)
                 .offset(x:120, y:-350)
                 .opacity(0.6)
-            
-        }
-        
-        
-        VStack{
-            HStack {
-                Text("Profile")
-                    .frame(width: 50)
-                    .font(.subheadline)
-                Circle()
-                    .frame(width: 60, height: 60)
-            }.offset(x:120, y: -350)
             
         }
 

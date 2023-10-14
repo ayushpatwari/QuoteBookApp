@@ -10,14 +10,19 @@ import Firebase
 
 @main
 struct discoverPageApp: App {
-   
+    @AppStorage("signIn") var isSignIn = false
+
     init() {
         FirebaseApp.configure()
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if (!isSignIn) {
+                LoginScreen()
+            } else {
+                ContentView()
+            }
         }
     }
 }

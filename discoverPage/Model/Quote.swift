@@ -8,6 +8,8 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import SwiftUI
+
 
 struct Quote: Identifiable, Decodable {
     @DocumentID var id: String?
@@ -23,6 +25,11 @@ struct Quote: Identifiable, Decodable {
         return dateOf(with: self.createdAt!.dateValue())
     }
     
+    
+    var gradCol: Color? {
+        return Color.randomGradientColor(hex: self.color, deviation: 0.9)!
+        
+    }
     var description: String? {
 """
 "\(self.content)"
