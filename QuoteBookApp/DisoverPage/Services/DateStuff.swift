@@ -16,7 +16,5 @@ func dateOf(with date: Date) -> String {
 let calendar = Calendar.current
 func findDayBefore(date: Date) -> Date{
     let yesterday = calendar.date(byAdding: .day, value: -1, to: date)!
-    print(yesterday)
     return yesterday
-
 }

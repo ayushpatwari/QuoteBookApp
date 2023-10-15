@@ -17,12 +17,50 @@ class ViewModel : ObservableObject {
     @Published var quotes = [LibraryQuoteModel]()
     
     
+    func getDataForCurrentUser() {
+            if let currentUserUID = Auth.auth().currentUser?.uid {
+                let db = Firestore.firestore()
+                
+                db.collection("users")
+                    .document(currentUserUID)
+                    .collection("quotes")
+                    .order(by: "createdAt", descending: true) // You can adjust the sorting as needed
+                    .addSnapshotListener { snapshot, error in
+                        if let error = error {
+                            // Handle the error
+                            print("Error fetching data: \(error.localizedDescription)")
+                            return
+                        }
+                        
+                        if let snapshot = snapshot {
+                            DispatchQueue.main.async {
+                                self.quotes = snapshot.documents.compactMap { document in
+                                    let data = document.data()
+                                    let author = data["author"] as? String ?? ""
+                                    let content = data["content"] as? String ?? ""
+                                    let createdAtTimestamp = data["createdAt"] as? Timestamp
+                                    let visibility = data["visibility"] as? Bool ?? false
+                                    let color = data["color"] as? String ?? "N/A"
+                                    
+                                    return LibraryQuoteModel(id: document.documentID,
+                                                 author: author,
+                                                 content: content, likes: 0,
+                                                 createdAt: createdAtTimestamp?.dateValue() ?? Date(),
+                                                 visibility: visibility, color: color)
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    
+    
     func addCollection(Name: String, color : String, quoteSelected: [String])
     {
         
         let db = Firestore.firestore()
         
-        let currentCollection = db.collection("users").document("PXdGBOEYXMBkIMhY25ot").collection("collections").document();
+        let currentCollection = db.collection("users").document("PXdGBOEYXMBkIMhY25ot").collection("collections").document()
         
         currentCollection.setData(["Name": Name, "Color": color]);
         

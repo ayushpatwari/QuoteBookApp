@@ -21,27 +21,24 @@ struct CollectionsView: View
     @EnvironmentObject  var addCollectionClass : fabIconClass
     
     
-
+    
     
     @Namespace private var animation
     
     @State private var chooseQuotes = false
     
     let uiscreen = UIScreen.main.bounds
-
+    
     var body: some View
     {
-        
         ZStack{
+            Color("Primary")
+                .ignoresSafeArea()
             
             if (addCollectionClass.addCollection == false)
             {
-                VStack(alignment: .center)
-                {
-                    //title
-                    Text("Collections")
-                        .padding(.bottom)
-                        .fontWeight(.semibold)
+                
+                VStack {
                     
                     //view that contains all the collections
                     NavigationView
@@ -55,12 +52,14 @@ struct CollectionsView: View
                                         CollectionCard(collection: collection)
                                     }
                                 }
+                                .navigationTitle("Collections")
                             }
                         }
+                        .background(Color("Primary"))
                     }
+                    .frame(width: self.uiscreen.width, alignment: .center)
+//                    .blur(radius: (addCollectionClass.addCollection ? 20 : 0))
                 }
-                .frame(width: self.uiscreen.width, alignment: .center)
-                .blur(radius: (addCollectionClass.addCollection ? 20 : 0))
             }
             if (addCollectionClass.addCollection == false)
             {
@@ -68,27 +67,25 @@ struct CollectionsView: View
                 TabBar()
                 
             }
-
+            
             
             if (addCollectionClass.addCollection)
             {
-                withAnimation(.bouncy()) {
-                    AddCollectionView(choosingQuotes: $chooseQuotes)
-                        .frame(maxWidth: (chooseQuotes ? self.uiscreen.width/1.1 : self.uiscreen.width/1.25), maxHeight: (chooseQuotes ? self.uiscreen.height/1.175 : self.uiscreen.height/1.9)  )
-                        .background(
-                            Color("Color"))
-                        .cornerRadius(25)
-                        .matchedGeometryEffect(id: "choosequotes", in: animation)
-                }
-            
+                AddCollectionView(choosingQuotes: $chooseQuotes)
+                    .frame(maxWidth: (chooseQuotes ? self.uiscreen.width/1.1 : self.uiscreen.width/1.25), maxHeight: (chooseQuotes ? self.uiscreen.height/1.175 : self.uiscreen.height/1.9)  )
+                    .cornerRadius(25)
+                    .matchedGeometryEffect(id: "choosequotes", in: animation)
+                
                 
             }
         }
+        .background(Color("Primary"))
     }
     
     init()
     {
         model.getCollection()
+        UINavigationBar.appearance().barTintColor = .init(Color("Primary"))
     }
 }
 
@@ -141,7 +138,7 @@ struct AddCollectionView: View
                         
                         //we need to add
                         ColorPicker("ColorPicker", selection: $initalColor, supportsOpacity: false)
-                                .labelsHidden()
+                            .labelsHidden()
                         Button("Done"){
                             withAnimation (.spring()){
                                 model.addCollection(Name: name, color: initalColor.toHex() ?? "N/A", quoteSelected: selectedQuotes.selectedQuotes)
@@ -202,7 +199,6 @@ struct chooseQuoteView : View {
                         }
                         .frame(maxWidth: .infinity)
                         .background(Color(#colorLiteral(red: 0, green: 0.5, blue: 0.4812854786, alpha: 1)))
-                        //Make it so the background color changes from ColorPicker 💩
                         .cornerRadius(7)
                     }
                     .padding(.vertical, 4)
@@ -243,44 +239,44 @@ struct CollectionsEditor: View {
     
     @ObservedObject var model = ViewModel()
     var collection: Collection
-    @State private var intialColor : Color = .clear
+    @State private var intialColor : Color
     @State private var name = ""
+    
+    
+    init(collection: Collection)
+    {
+        self.collection = collection
+        self._intialColor = State(initialValue: Color(hex: collection.color) ?? .clear)
+    }
     var body: some View {
-        ScrollView {
-            Text(collection.name)
+        Text(collection.name)
+        
+        Button
+        {
+            model.deleteCollection(collection: collection)
+        } label: {
+            Image(systemName: "xmark")
+        }
+        
+        Text("Car")
+        Form
+        {
+            TextField("Collection Name", text: $name)
+                .multilineTextAlignment(.center)
             
-            Button
-            {
-                model.deleteCollection(collection: collection)
-            } label: {
-                Image(systemName: "xmark")
-            }
-            
-            ZStack
-            {
-                VStack {
-                    Form
-                    {
-                        TextField("Collection Name", text: $name)
-                            .multilineTextAlignment(.center)
-                        ColorPicker("ColorPicker", selection: $intialColor, supportsOpacity: false)
-                                .labelsHidden()
-                        Button("Submit"){
-                            withAnimation (.spring()){
-                                model.updateCollection(collection: collection, newName: name, newColor: intialColor.toHex() ?? "N/A")
-                            }
-                        }
-                    }
-                    .foregroundColor(.black)
-                    .font(.body)
-                    .fontWeight(.bold)
-                    .padding()
-                    .frame(alignment: .center)
+            //we need to add
+            ColorPicker("ColorPicker", selection: $intialColor, supportsOpacity: false)
+                .labelsHidden()
+            Button("Done"){
+                withAnimation (.spring()){
+                    model.updateCollection(collection: collection, newName: name, newColor: intialColor.toHex() ?? "N/A")
                 }
             }
         }
-        
-        
+        .foregroundColor(.black)
+        .font(.custom("YoungSerif-Regular", size: 30))
+        .fontWeight(.bold)
+        .padding()
+        .frame(alignment: .center)
     }
-
 }

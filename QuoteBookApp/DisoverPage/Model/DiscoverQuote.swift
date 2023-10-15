@@ -8,22 +8,28 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import SwiftUI
 
-struct DiscoverQuote: Identifiable, Decodable 
-{
+
+struct DiscoverQuote: Identifiable, Decodable {
     @DocumentID var id: String?
     let content: String
     let author: String
     var likes: Int
-    let color: String
+    var color: String
     let isQOTD: Bool?
     let visibility: Bool?
-    var createdAt: Timestamp
+    var createdAt: Timestamp?
     
     var dateStamp: String {
-        return dateOf(with: self.createdAt.dateValue())
+        return dateOf(with: self.createdAt!.dateValue())
     }
     
+    
+    var gradCol: Color? {
+        return Color.randomGradientColor(hex: self.color, deviation: 0.9)!
+        
+    }
     var description: String? {
 """
 "\(self.content)"

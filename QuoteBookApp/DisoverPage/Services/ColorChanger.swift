@@ -7,48 +7,48 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 
+extension Color {
+    
+    static func randomGradientColor(hex: String, deviation: Double) -> Color? {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
 
-func colorFromString(_ colorString: String) -> Color {
-    switch colorString.lowercased() {
-        case "blue":
-            return .blue
-        case "red":
-            return .red
-        case "yellow":
-            return .yellow
-        case "purple":
-            return.purple
-        case "pink":
-            return .pink
-        case "green":
-            return .green
-        case "orange":
-            return .orange
-        default:
-            return .black
-    }
-}
+        var rgb: UInt64 = 0
 
-func colorFromFirstColor(_ colorString: String) -> Color {
-    let blueChoices: [String] = ["green"]
+        var r: CGFloat = 0.0
+        var g: CGFloat = 0.0
+        var b: CGFloat = 0.0
+        var a: CGFloat = 1.0
 
-    switch colorString.lowercased() {
-    case "blue":
-        return colorFromString(blueChoices.randomElement() ?? "orange")
-    case "green":
-        return .orange
-    case "red":
-        return .orange
-    case "yellow":
-        return .orange
-    case "purple":
-        return .pink
-    case "pink":
-        return .orange
-    case "orange":
-        return .yellow
-    default:
-        return .black
+        let length = hexSanitized.count
+
+        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else { return nil }
+
+        if length == 6 {
+            r = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+            g = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+            b = CGFloat(rgb & 0x0000FF) / 255.0
+        } else if length == 8 {
+            r = CGFloat((rgb & 0xFF000000) >> 24) / 255.0
+            g = CGFloat((rgb & 0x00FF0000) >> 16) / 255.0
+            b = CGFloat((rgb & 0x0000FF00) >> 8) / 255.0
+            a = CGFloat(rgb & 0x000000FF) / 255.0
+        } else {
+            return nil
+        }
+
+        // Add random deviation to the color components
+        r += CGFloat.random(in: -deviation...deviation)
+        g += CGFloat.random(in: -deviation...deviation)
+        b += CGFloat.random(in: -deviation...deviation)
+
+        // Ensure that the color components stay within the valid range (0.0 - 1.0)
+        r = min(1.0, max(0.0, r))
+        g = min(1.0, max(0.0, g))
+        b = min(1.0, max(0.0, b))
+
+        return Color(red: Double(r), green: Double(g), blue: Double(b), opacity: Double(a))
     }
 }

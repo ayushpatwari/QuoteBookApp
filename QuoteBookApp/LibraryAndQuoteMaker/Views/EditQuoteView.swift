@@ -20,7 +20,7 @@ struct EditQuoteView: View {
     @State var quote : LibraryQuoteModel
     @State var visibility : Bool
     @State private var isPublic: Bool = false
-    @State private var color : Color = .clear
+    @State private var color : Color
     
     @State private var emptyContent: Bool = false
     @State private var numberOfShakes: Int = 0
@@ -33,6 +33,7 @@ struct EditQuoteView: View {
         self._quote = State(initialValue: quote)
         self._visibility = State(initialValue: quote.visibility)
         self._isPublic = State(initialValue: quote.visibility)
+        self._color = State(initialValue: Color(hex: quote.color) ?? .clear)
         
         UITableView.appearance().contentInset.top = -25
         UITableView.appearance().backgroundColor = .clear

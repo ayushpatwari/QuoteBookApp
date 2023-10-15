@@ -93,7 +93,7 @@ struct TabBar: View {
                                 viewModel.selectedTab = "discover"
                                 
                             } label: {
-                                Image(systemName: "safari")
+                                Image(systemName: "globe.desk")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: 24, height: 24)

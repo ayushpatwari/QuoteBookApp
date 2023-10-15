@@ -6,24 +6,32 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SingleQuote: View {
-    
-    @State var quote: DiscoverQuote
     @ObservedObject var viewModel = QuoteViewModel()
+    @State var quote: DiscoverQuote
+    @State private var isLiked = false
     let screen = UIScreen.main.bounds
 
     var body: some View{
         GeometryReader {geometry in
             ZStack {
+                
                 Rectangle()
                     .fill(LinearGradient(
-                        gradient: Gradient(colors: [colorFromString(quote.color), colorFromFirstColor(quote.color)]),
+                        gradient: Gradient(colors: [Color(hex: quote.color)!, Color.randomGradientColor(hex: quote.color, deviation: 1.0)!]),
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing))
-                    .frame(width: .infinity, height: .infinity)
+                    .frame(width: screen.width, height: screen.height)
                         .aspectRatio(contentMode: .fill)
                         .ignoresSafeArea()
+                        .onTapGesture (count: 2) {
+                            viewModel.likeQuote(quote: quote)
+                            viewModel.checkIfUserLiked(quote: quote) { result in
+                                self.isLiked = result
+                            }
+                        }
                 VStack (spacing: 40) {
                     Spacer()
                     Text(quote.content)
@@ -40,10 +48,18 @@ struct SingleQuote: View {
                         //Like -> Depending on status of IfLiked this will fire
                         Button {
                             viewModel.likeQuote(quote: quote)
+                            viewModel.checkIfUserLiked(quote: quote) { result in
+                                self.isLiked = result
+                            }
                         } label: {
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(Color.white)
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .foregroundColor(isLiked ? .pink : .white)
                                 .font(.title2)
+                                .onAppear {
+                                    viewModel.checkIfUserLiked(quote: quote) { result in
+                                        self.isLiked = result
+                                    }
+                                }
                             
                         }
                         Button {
@@ -56,7 +72,7 @@ struct SingleQuote: View {
                             
                         }
                         Button {
-                            print("DEBUG: Just Shared")
+                            
                         } label: {
                             Image(systemName: "icloud.and.arrow.down.fill")
                                 .foregroundColor(Color.white)
@@ -65,18 +81,14 @@ struct SingleQuote: View {
                         }
                     }.padding()
                     Spacer()
+                    
                 }
-            }
+                                
+                            }
+            
             .ignoresSafeArea()
             .frame(width: geometry.size.width, height: geometry.size.height)
             }
         }
 }
 
-/*
-struct SingleQuote_Previews: PreviewProvider {
-    static var previews: some View {
-        SingleQuote(quote: Quote(content: "All men are created equal", author: "yesman", likes: 43, color: "yellow", isQOTD: true, timestamp: nil))
-    }
-}
-*/

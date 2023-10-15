@@ -12,59 +12,69 @@ struct DiscoverPage: View {
     @State var currentQuote: String = ""
     let screen = UIScreen.main.bounds
     @State var searchText: String = ""
+    @State var show: Bool = false
     
     var body: some View {
-        ZStack 
-        {
+        ZStack (alignment: .topTrailing){
             VStack {
-                GeometryReader { proxy in
-                    let size = proxy.frame(in: .global)
-                    
-                    TabView (selection: $currentQuote) {
-                        ForEach(viewModel.quotes) {quote in
-                            SingleQuote(quote: quote)
-                                .rotationEffect(.init(degrees: -90))
-                                .frame(height: size.height)
-                                .onTapGesture (count: 2) {
-                                    viewModel.likeQuote(quote: quote)
-                                }
-                        }
-                        .ignoresSafeArea()
-                    }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                        .rotationEffect(.init(degrees:90))
-                        .frame(width: size.width)
-                        .frame(height: size.height)
-                        .edgesIgnoringSafeArea(.top)
-                    
-                }.frame(
-                    width: screen.height,
-                    height: screen.width
-                )
+                
+                ScrollView(.init())
+                {
+                    GeometryReader { proxy in
+                        let size = proxy.frame(in: .global)
+                        
+                        TabView (selection: $currentQuote) {
+                            ForEach(viewModel.searchedQuotes) {quote in
+                                SingleQuote(quote: quote)
+                                    .frame(width: size.width, height: size.height)
+                                    .rotationEffect(.init(degrees: -90))
+                                    .frame(width: size.width, height: size.height)
+                                    
+                            }
+                            .ignoresSafeArea()
+                        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                            .rotationEffect(.init(degrees:90))
+                            .frame(width: size.width)
+                            .frame(height: size.height)
+                            .edgesIgnoringSafeArea(.top)
+                        
+                    }
+                    .frame(
+                        width: screen.height,
+                        height: screen.width
+                    )
+                }
+                .ignoresSafeArea()
+                
             }
             
             HStack {
-                TextField("Search.....", text: $viewModel.searchText)
-                    .padding(8)
-                    .padding(.horizontal, 24)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .overlay(
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.gray)
-                                .frame(minWidth: 0, maxWidth: screen.width, alignment: .leading)
-                                .padding(.leading, 8)
-                        }
-                    
-                    )
-                    .opacity(0.6)
+                if show {
+                    TextField("Search.....", text: $viewModel.searchText)
+                        .padding(8)
+                        .padding(.horizontal, 24)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .overlay(
+                            HStack {
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundColor(.gray)
+                                    .frame(minWidth: 0, maxWidth: screen.width, alignment: .leading)
+                                    .padding(.leading, 8)
+                            }
+                            
+                        )
+                        .opacity(0.6)
+                }
             }
             .padding(.horizontal, 4)
+            ProfileImageView()
+                .padding()
             
-            
-            TabBar()
         }
     }
         
 }
-    
+
+
+

@@ -9,10 +9,10 @@ import SwiftUI
 import Firebase
 import FirebaseCore
 
-
 @main
 struct QuoteBookAppApp: App {
     @ObservedObject var model = ViewModel()
+    @AppStorage("signIn") var isSignIn = false
     
     init() {
         FirebaseApp.configure()
@@ -20,10 +20,22 @@ struct QuoteBookAppApp: App {
     }
     
     var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//                .environmentObject(tabModel())
+//                .environmentObject(fabIconClass())
+//        }
+        
+        
+        
         WindowGroup {
-            ContentView()
-                .environmentObject(tabModel())
-                .environmentObject(fabIconClass())
+            if !isSignIn {
+                LoginScreen()
+            } else {
+                ContentView()
+                    .environmentObject(tabModel())
+                    .environmentObject(fabIconClass())
+            }
         }
     }
 }

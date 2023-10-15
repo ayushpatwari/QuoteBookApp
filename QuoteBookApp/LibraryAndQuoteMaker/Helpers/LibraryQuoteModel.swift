@@ -1,21 +1,23 @@
 //
-//  Quote.swift
-//  QuoteBook
+//  Model.swift
+//  discoverPage
 //
-//  Created by Rithik Kumar on 7/27/23.
+//  Created by Vishal Varma on 7/13/23.
 //
 
 import Foundation
 import Firebase
-import FirebaseFirestore
+import FirebaseFirestoreSwift
+import SwiftUI
 
 
-struct LibraryQuoteModel: Identifiable {
+struct LibraryQuoteModel: Identifiable, Decodable {
     var id: String
     var author: String
     var content: String
     var likes: Int
-    var createdAt: Date
-    var visibility: Bool
+    var createdAt : Date
+    var visibility : Bool
     var color : String
+    
 }

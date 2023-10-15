@@ -6,18 +6,22 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestore
 
 final class QuoteViewModel: ObservableObject {
     let service = QuoteService()
     @Published var quotes = [DiscoverQuote]()
-    var quotes2 = [DiscoverQuote]()
+    @Published var quotes2 = [DiscoverQuote]()
     @Published var searchText: String = ""
+    @Published var searchable: Bool = false
+    let db = Firestore.firestore().collection("users")
     
     
     //Because of the algorithm for finding best quotes, searching will not work :c.
     var searchedQuotes: [DiscoverQuote] {
         if searchText.isEmpty {
-            return quotes
+            return quotes2
         } else {
             print(searchText)
             let lowercaseQuery = searchText.lowercased()
@@ -33,20 +37,82 @@ final class QuoteViewModel: ObservableObject {
     }
     
     init() {
-        fetchInitialQuotes()    }
+        fetchInitialQuotes(date: Date())
+    }
     
-    func fetchInitialQuotes () -> Void{
+    func fetchInitialQuotes (date: Date) -> Void{
         service.fetchInitialQuotes{ quotes in
-            self.quotes2 = quotes.filter({
-                $0.dateStamp == dateOf(with: Date())
-            })
             self.quotes = quotes
-            print(self.quotes)
+            self.quotes2 = quotes.filter({
+                $0.dateStamp == dateOf(with: date)
+            })
+            if self.quotes2.count <= 3 {
+                let dayBefore = findDayBefore(date: date)
+                self.fetchInitialQuotes(date: dayBefore)
+            } else {
+                print("Found a day with more than 3 quotes (Hooray!)")
+            }
         }
     }
     
     func likeQuote (quote: DiscoverQuote) {
-        service.likeQuote(quote: quote)
+        if let currentUserUID = Auth.auth().currentUser?.uid {
+            //check if the quote provided is located in the collection known as likedQuotes
+            let documentRef = db.document(currentUserUID).collection("collections").document("liked").collection("quotes").document(quote.id!)
+            documentRef.getDocument { (document, error) in
+                if let error = error {
+                    print("Error fetching document: \(error)")
+                } else if let document = document, document.exists {
+                    let documentData = document.data()
+                    print("DEBUG: The user has already liked the quote; should be rendered as pink: Wants to UNLIKE so will deal with that now")
+                    self.service.unlikeQuote(quote: quote)
+                    documentRef.delete {error in
+                        if let error = error {
+                            print("Error deleting quote: \(error.localizedDescription)")
+                        } else {
+                            return
+                        }
+                    }
+                } else {
+                    print("DEBUG: User has NOT liked the quote - about to like it now!")
+                    self.service.likeQuote(quote: quote)
+                    let data: [String: Any] = [
+                        "id" : quote.id!
+                    ]
+                    documentRef.setData(data) {error in
+                        if let error = error {
+                            print("DEBUG: The user liked the quote but we cannot add it to their liked collection")
+                        } else {
+                            print("DEBUG: User has liked and Firebase is reflective of this change")
+                        }
+                        
+                    }
+                }
+            }
+            
+        } else {
+            return
+        }
+    }
+    
+    func checkIfUserLiked(quote: DiscoverQuote, completionHandler: @escaping (Bool) -> Void) {
+        if let currentUserUID = Auth.auth().currentUser?.uid {
+            // Check if the quote provided is located in the collection known as likedQuotes
+            let documentRef = db.document(currentUserUID).collection("collections").document("liked").collection("quotes").document(quote.id!)
+            documentRef.getDocument { (document, error) in
+                if let error = error {
+                    print("Error fetching document: \(error)")
+                    completionHandler(false)
+                } else if let document = document, document.exists {
+                    print("DEBUG: The user has already liked the quote; should be rendered as pink")
+                    completionHandler(true)
+                } else {
+                    completionHandler(false)
+                }
+            }
+        } else {
+            completionHandler(false)
+        }
     }
     
     func filterQuote(withTag tag: String) {
