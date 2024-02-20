@@ -1,0 +1,975 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA255AB82AF1D8550023150D /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AAA2AF1D8550023150D /* JosefinSans-Light.ttf */; };
+		FA255AB92AF1D8550023150D /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AAB2AF1D8550023150D /* JosefinSans-BoldItalic.ttf */; };
+		FA255ABA2AF1D8550023150D /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AAC2AF1D8550023150D /* JosefinSans-Regular.ttf */; };
+		FA255ABB2AF1D8550023150D /* JosefinSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AAD2AF1D8550023150D /* JosefinSans-ExtraLight.ttf */; };
+		FA255ABC2AF1D8550023150D /* JosefinSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AAE2AF1D8550023150D /* JosefinSans-ExtraLightItalic.ttf */; };
+		FA255ABD2AF1D8550023150D /* JosefinSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AAF2AF1D8550023150D /* JosefinSans-Medium.ttf */; };
+		FA255ABE2AF1D8550023150D /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB02AF1D8550023150D /* JosefinSans-Thin.ttf */; };
+		FA255ABF2AF1D8550023150D /* JosefinSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB12AF1D8550023150D /* JosefinSans-MediumItalic.ttf */; };
+		FA255AC02AF1D8550023150D /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB22AF1D8550023150D /* JosefinSans-Italic.ttf */; };
+		FA255AC12AF1D8550023150D /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB32AF1D8550023150D /* JosefinSans-SemiBoldItalic.ttf */; };
+		FA255AC22AF1D8550023150D /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB42AF1D8550023150D /* JosefinSans-LightItalic.ttf */; };
+		FA255AC32AF1D8550023150D /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB52AF1D8550023150D /* JosefinSans-ThinItalic.ttf */; };
+		FA255AC42AF1D8550023150D /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB62AF1D8550023150D /* JosefinSans-Bold.ttf */; };
+		FA255AC52AF1D8550023150D /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA255AB72AF1D8550023150D /* JosefinSans-SemiBold.ttf */; };
+		FA26230B2AD2419E000AEC40 /* GrandifloraOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA26230A2AD2419E000AEC40 /* GrandifloraOne-Regular.ttf */; };
+		FA2D8BDD2A6EFCF7000EE10C /* tab bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */; };
+		FA31217A2AA39EDA001366F9 /* DiscoverPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121792AA39EDA001366F9 /* DiscoverPage.swift */; };
+		FA31217C2AA39F15001366F9 /* SingleQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31217B2AA39F15001366F9 /* SingleQuote.swift */; };
+		FA31217E2AA39F45001366F9 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31217D2AA39F45001366F9 /* QuoteService.swift */; };
+		FA3121802AA39FCE001366F9 /* ColorChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31217F2AA39FCE001366F9 /* ColorChanger.swift */; };
+		FA3121832AA3A1EF001366F9 /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121822AA3A1EF001366F9 /* QuoteViewModel.swift */; };
+		FA3121892AA3C2C0001366F9 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121882AA3C2C0001366F9 /* LibraryViewModel.swift */; };
+		FA31218C2AA3C305001366F9 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31218B2AA3C305001366F9 /* TagView.swift */; };
+		FA31218F2AA3C341001366F9 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31218E2AA3C341001366F9 /* TimeFormatting.swift */; };
+		FA3121912AA3C35B001366F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121902AA3C35B001366F9 /* AppDelegate.swift */; };
+		FA3121932AA3C375001366F9 /* GoogleSignBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121922AA3C375001366F9 /* GoogleSignBtn.swift */; };
+		FA3121982AA3C4BC001366F9 /* AddQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */; };
+		FA31219B2AA3C533001366F9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FA31219A2AA3C533001366F9 /* GoogleSignIn */; };
+		FA31219D2AA3C533001366F9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA31219C2AA3C533001366F9 /* GoogleSignInSwift */; };
+		FA31219F2AA3C56B001366F9 /* +View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31219E2AA3C56B001366F9 /* +View.swift */; };
+		FA3121A12AA3C5EF001366F9 /* EditQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */; };
+		FA3121A42AA42056001366F9 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = FA3121A32AA42056001366F9 /* HalfASheet */; };
+		FA3BCD022AD71F55002D19B7 /* tabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BCD012AD71F55002D19B7 /* tabModel.swift */; };
+		FA3F4A092A4C73E60003E18B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A082A4C73E60003E18B /* ContentView.swift */; };
+		FA3F4A0B2A4C73E70003E18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */; };
+		FA3F4A0E2A4C73E70003E18B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3F4A0D2A4C73E70003E18B /* Preview Assets.xcassets */; };
+		FA3F4A182A4C73E70003E18B /* QuoteBookAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A172A4C73E70003E18B /* QuoteBookAppTests.swift */; };
+		FA3F4A222A4C73E70003E18B /* QuoteBookAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A212A4C73E70003E18B /* QuoteBookAppUITests.swift */; };
+		FA3F4A242A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3F4A232A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift */; };
+		FA5A087A2A79AC8D002F139B /* DiscoverQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A08792A79AC8D002F139B /* DiscoverQuote.swift */; };
+		FA5A087C2A79AE9E002F139B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A087B2A79AE9E002F139B /* ViewModel.swift */; };
+		FA84006B2AD3874700E9AE74 /* YoungSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA84006A2AD3874700E9AE74 /* YoungSerif-Regular.ttf */; };
+		FA89AF372AA656B6005778BE /* LibraryQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF362AA656B6005778BE /* LibraryQuoteModel.swift */; };
+		FA89AF392AA657AC005778BE /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF382AA657AC005778BE /* LoginScreen.swift */; };
+		FA89AF3B2AA657DF005778BE /* TagSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF3A2AA657DF005778BE /* TagSelectionView.swift */; };
+		FA89AF3F2AA65A7E005778BE /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF3E2AA65A7E005778BE /* LibraryView.swift */; };
+		FA89AF412AA65BA1005778BE /* DateStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF402AA65BA1005778BE /* DateStuff.swift */; };
+		FA89AF482AA65C3F005778BE /* CollectionQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA89AF472AA65C3F005778BE /* CollectionQuote.swift */; };
+		FAA312082AAD1FC900140B1E /* ColorSwitching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA312072AAD1FC900140B1E /* ColorSwitching.swift */; };
+		FACF66192ADAE8490098BA34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACF66182ADAE8490098BA34 /* GoogleService-Info.plist */; };
+		FADAEF1D2A7948EB00F246EE /* QuoteBookAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */; };
+		FAE50EE12ADB4AD20011A61C /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE50EE02ADB4AD20011A61C /* ProfileImageView.swift */; };
+		FAE50EE42ADB4B0F0011A61C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FAE50EE32ADB4B0F0011A61C /* SDWebImageSwiftUI */; };
+		FAE50EE62ADB527C0011A61C /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE50EE52ADB527C0011A61C /* HomePage.swift */; };
+		FAF01E222A6D70E600A960EF /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF01E212A6D70E600A960EF /* CollectionsView.swift */; };
+		FAF525AB2A740F4200474C13 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525AA2A740F4200474C13 /* FirebaseFirestore */; };
+		FAF525AE2A74107400474C13 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525AD2A74107400474C13 /* FirebaseAuth */; };
+		FAF525B02A74107400474C13 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525AF2A74107400474C13 /* FirebaseFirestoreSwift */; };
+		FAF525B22A74107400474C13 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FAF525B12A74107400474C13 /* FirebaseStorage */; };
+		FAF525B82A744DEE00474C13 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF525B72A744DEE00474C13 /* AuthViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA3F4A142A4C73E70003E18B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3F49FB2A4C73E60003E18B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA3F4A022A4C73E60003E18B;
+			remoteInfo = QuoteBookApp;
+		};
+		FA3F4A1E2A4C73E70003E18B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3F49FB2A4C73E60003E18B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA3F4A022A4C73E60003E18B;
+			remoteInfo = QuoteBookApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA255AAA2AF1D8550023150D /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Light.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		FA255AAB2AF1D8550023150D /* JosefinSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-BoldItalic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FA255AAC2AF1D8550023150D /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Regular.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
+		FA255AAD2AF1D8550023150D /* JosefinSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ExtraLight.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FA255AAE2AF1D8550023150D /* JosefinSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ExtraLightItalic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FA255AAF2AF1D8550023150D /* JosefinSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Medium.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-Medium.ttf"; sourceTree = "<group>"; };
+		FA255AB02AF1D8550023150D /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Thin.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
+		FA255AB12AF1D8550023150D /* JosefinSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-MediumItalic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FA255AB22AF1D8550023150D /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Italic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
+		FA255AB32AF1D8550023150D /* JosefinSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-SemiBoldItalic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA255AB42AF1D8550023150D /* JosefinSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-LightItalic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		FA255AB52AF1D8550023150D /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ThinItalic.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FA255AB62AF1D8550023150D /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Bold.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		FA255AB72AF1D8550023150D /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-SemiBold.ttf"; path = "../../../../Downloads/Josefin Sans/static/JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA26230A2AD2419E000AEC40 /* GrandifloraOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GrandifloraOne-Regular.ttf"; path = "../../../../Downloads/Grandiflora One/GrandifloraOne-Regular.ttf"; sourceTree = "<group>"; };
+		FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tab bar.swift"; sourceTree = "<group>"; };
+		FA3121792AA39EDA001366F9 /* DiscoverPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPage.swift; sourceTree = "<group>"; };
+		FA31217B2AA39F15001366F9 /* SingleQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleQuote.swift; sourceTree = "<group>"; };
+		FA31217D2AA39F45001366F9 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		FA31217F2AA39FCE001366F9 /* ColorChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChanger.swift; sourceTree = "<group>"; };
+		FA3121822AA3A1EF001366F9 /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
+		FA3121882AA3C2C0001366F9 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		FA31218B2AA3C305001366F9 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		FA31218E2AA3C341001366F9 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		FA3121902AA3C35B001366F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA3121922AA3C375001366F9 /* GoogleSignBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignBtn.swift; sourceTree = "<group>"; };
+		FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteView.swift; sourceTree = "<group>"; };
+		FA31219E2AA3C56B001366F9 /* +View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+View.swift"; sourceTree = "<group>"; };
+		FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuoteView.swift; sourceTree = "<group>"; };
+		FA3BCD012AD71F55002D19B7 /* tabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabModel.swift; sourceTree = "<group>"; };
+		FA3F4A032A4C73E60003E18B /* QuoteBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3F4A082A4C73E60003E18B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA3F4A0D2A4C73E70003E18B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA3F4A132A4C73E70003E18B /* QuoteBookAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteBookAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3F4A172A4C73E70003E18B /* QuoteBookAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppTests.swift; sourceTree = "<group>"; };
+		FA3F4A1D2A4C73E70003E18B /* QuoteBookAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoteBookAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3F4A212A4C73E70003E18B /* QuoteBookAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppUITests.swift; sourceTree = "<group>"; };
+		FA3F4A232A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA5A08792A79AC8D002F139B /* DiscoverQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverQuote.swift; sourceTree = "<group>"; };
+		FA5A087B2A79AE9E002F139B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FA84006A2AD3874700E9AE74 /* YoungSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "YoungSerif-Regular.ttf"; path = "../../../../Downloads/Young Serif/YoungSerif-Regular.ttf"; sourceTree = "<group>"; };
+		FA89AF362AA656B6005778BE /* LibraryQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryQuoteModel.swift; sourceTree = "<group>"; };
+		FA89AF382AA657AC005778BE /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		FA89AF3A2AA657DF005778BE /* TagSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectionView.swift; sourceTree = "<group>"; };
+		FA89AF3E2AA65A7E005778BE /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		FA89AF402AA65BA1005778BE /* DateStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStuff.swift; sourceTree = "<group>"; };
+		FA89AF472AA65C3F005778BE /* CollectionQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionQuote.swift; sourceTree = "<group>"; };
+		FAA312072AAD1FC900140B1E /* ColorSwitching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwitching.swift; sourceTree = "<group>"; };
+		FACF66182ADAE8490098BA34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBookAppApp.swift; sourceTree = "<group>"; };
+		FAE50EE02ADB4AD20011A61C /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		FAE50EE52ADB527C0011A61C /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		FAF01E212A6D70E600A960EF /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
+		FAF525B72A744DEE00474C13 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA3F4A002A4C73E60003E18B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA31219B2AA3C533001366F9 /* GoogleSignIn in Frameworks */,
+				FAF525AB2A740F4200474C13 /* FirebaseFirestore in Frameworks */,
+				FAF525B22A74107400474C13 /* FirebaseStorage in Frameworks */,
+				FA3121A42AA42056001366F9 /* HalfASheet in Frameworks */,
+				FAE50EE42ADB4B0F0011A61C /* SDWebImageSwiftUI in Frameworks */,
+				FA31219D2AA3C533001366F9 /* GoogleSignInSwift in Frameworks */,
+				FAF525AE2A74107400474C13 /* FirebaseAuth in Frameworks */,
+				FAF525B02A74107400474C13 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3F4A102A4C73E70003E18B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3F4A1A2A4C73E70003E18B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA3121812AA3A1C4001366F9 /* DisoverPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA89AF432AA65BDC005778BE /* Views */,
+				FA89AF422AA65BC7005778BE /* ViewModel */,
+				FA89AF452AA65BEF005778BE /* Services */,
+				FA89AF442AA65BEB005778BE /* Model */,
+			);
+			path = DisoverPage;
+			sourceTree = "<group>";
+		};
+		FA3121852AA3A236001366F9 /* CollectionsPage */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E74272A676C82003A0EEC /* Views */,
+				FA58C0FB2A6818FC001B4962 /* Data */,
+				FAF01E212A6D70E600A960EF /* CollectionsView.swift */,
+				FA89AF472AA65C3F005778BE /* CollectionQuote.swift */,
+			);
+			path = CollectionsPage;
+			sourceTree = "<group>";
+		};
+		FA3121872AA3A272001366F9 /* LibraryAndQuoteMaker */ = {
+			isa = PBXGroup;
+			children = (
+				FA89AF3D2AA65A51005778BE /* Views */,
+				FA89AF3C2AA65A2E005778BE /* Helpers */,
+			);
+			path = LibraryAndQuoteMaker;
+			sourceTree = "<group>";
+		};
+		FA3F49FA2A4C73E60003E18B = {
+			isa = PBXGroup;
+			children = (
+				FA3F4A052A4C73E60003E18B /* QuoteBookApp */,
+				FA3F4A162A4C73E70003E18B /* QuoteBookAppTests */,
+				FA3F4A202A4C73E70003E18B /* QuoteBookAppUITests */,
+				FA3F4A042A4C73E60003E18B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA3F4A042A4C73E60003E18B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F4A032A4C73E60003E18B /* QuoteBookApp.app */,
+				FA3F4A132A4C73E70003E18B /* QuoteBookAppTests.xctest */,
+				FA3F4A1D2A4C73E70003E18B /* QuoteBookAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA3F4A052A4C73E60003E18B /* QuoteBookApp */ = {
+			isa = PBXGroup;
+			children = (
+				FA3121902AA3C35B001366F9 /* AppDelegate.swift */,
+				FAE50EE52ADB527C0011A61C /* HomePage.swift */,
+				FA84006A2AD3874700E9AE74 /* YoungSerif-Regular.ttf */,
+				FA255AB62AF1D8550023150D /* JosefinSans-Bold.ttf */,
+				FA255AAB2AF1D8550023150D /* JosefinSans-BoldItalic.ttf */,
+				FA255AAD2AF1D8550023150D /* JosefinSans-ExtraLight.ttf */,
+				FA255AAE2AF1D8550023150D /* JosefinSans-ExtraLightItalic.ttf */,
+				FA255AB22AF1D8550023150D /* JosefinSans-Italic.ttf */,
+				FA255AAA2AF1D8550023150D /* JosefinSans-Light.ttf */,
+				FA255AB42AF1D8550023150D /* JosefinSans-LightItalic.ttf */,
+				FA255AAF2AF1D8550023150D /* JosefinSans-Medium.ttf */,
+				FA255AB12AF1D8550023150D /* JosefinSans-MediumItalic.ttf */,
+				FA255AAC2AF1D8550023150D /* JosefinSans-Regular.ttf */,
+				FA255AB72AF1D8550023150D /* JosefinSans-SemiBold.ttf */,
+				FA255AB32AF1D8550023150D /* JosefinSans-SemiBoldItalic.ttf */,
+				FA255AB02AF1D8550023150D /* JosefinSans-Thin.ttf */,
+				FA255AB52AF1D8550023150D /* JosefinSans-ThinItalic.ttf */,
+				FA26230A2AD2419E000AEC40 /* GrandifloraOne-Regular.ttf */,
+				FACF66182ADAE8490098BA34 /* GoogleService-Info.plist */,
+				FA2D8BDC2A6EFCF7000EE10C /* tab bar.swift */,
+				FA3BCD012AD71F55002D19B7 /* tabModel.swift */,
+				FA3F4A082A4C73E60003E18B /* ContentView.swift */,
+				FADAEF1C2A7948EB00F246EE /* QuoteBookAppApp.swift */,
+				FA3121852AA3A236001366F9 /* CollectionsPage */,
+				FA3121872AA3A272001366F9 /* LibraryAndQuoteMaker */,
+				FA3121812AA3A1C4001366F9 /* DisoverPage */,
+				FA3F4A0A2A4C73E70003E18B /* Assets.xcassets */,
+				FA3F4A0C2A4C73E70003E18B /* Preview Content */,
+			);
+			path = QuoteBookApp;
+			sourceTree = "<group>";
+		};
+		FA3F4A0C2A4C73E70003E18B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F4A0D2A4C73E70003E18B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA3F4A162A4C73E70003E18B /* QuoteBookAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F4A172A4C73E70003E18B /* QuoteBookAppTests.swift */,
+			);
+			path = QuoteBookAppTests;
+			sourceTree = "<group>";
+		};
+		FA3F4A202A4C73E70003E18B /* QuoteBookAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3F4A212A4C73E70003E18B /* QuoteBookAppUITests.swift */,
+				FA3F4A232A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift */,
+			);
+			path = QuoteBookAppUITests;
+			sourceTree = "<group>";
+		};
+		FA4E74272A676C82003A0EEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA58C0FB2A6818FC001B4962 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FAF525B72A744DEE00474C13 /* AuthViewModel.swift */,
+				FA5A087B2A79AE9E002F139B /* ViewModel.swift */,
+				FAA312072AAD1FC900140B1E /* ColorSwitching.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA89AF3C2AA65A2E005778BE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA31218E2AA3C341001366F9 /* TimeFormatting.swift */,
+				FA3121882AA3C2C0001366F9 /* LibraryViewModel.swift */,
+				FA89AF362AA656B6005778BE /* LibraryQuoteModel.swift */,
+				FA31218B2AA3C305001366F9 /* TagView.swift */,
+				FA3121922AA3C375001366F9 /* GoogleSignBtn.swift */,
+				FA31219E2AA3C56B001366F9 /* +View.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA89AF3D2AA65A51005778BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA89AF3E2AA65A7E005778BE /* LibraryView.swift */,
+				FA3121972AA3C4BC001366F9 /* AddQuoteView.swift */,
+				FA3121A02AA3C5EF001366F9 /* EditQuoteView.swift */,
+				FA89AF3A2AA657DF005778BE /* TagSelectionView.swift */,
+				FA89AF382AA657AC005778BE /* LoginScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA89AF422AA65BC7005778BE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA3121822AA3A1EF001366F9 /* QuoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA89AF432AA65BDC005778BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3121792AA39EDA001366F9 /* DiscoverPage.swift */,
+				FA31217B2AA39F15001366F9 /* SingleQuote.swift */,
+				FAE50EE02ADB4AD20011A61C /* ProfileImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA89AF442AA65BEB005778BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5A08792A79AC8D002F139B /* DiscoverQuote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA89AF452AA65BEF005778BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA31217D2AA39F45001366F9 /* QuoteService.swift */,
+				FA31217F2AA39FCE001366F9 /* ColorChanger.swift */,
+				FA89AF402AA65BA1005778BE /* DateStuff.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA3F4A022A4C73E60003E18B /* QuoteBookApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3F4A272A4C73E70003E18B /* Build configuration list for PBXNativeTarget "QuoteBookApp" */;
+			buildPhases = (
+				FA3F49FF2A4C73E60003E18B /* Sources */,
+				FA3F4A002A4C73E60003E18B /* Frameworks */,
+				FA3F4A012A4C73E60003E18B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuoteBookApp;
+			packageProductDependencies = (
+				FAF525AA2A740F4200474C13 /* FirebaseFirestore */,
+				FAF525AD2A74107400474C13 /* FirebaseAuth */,
+				FAF525AF2A74107400474C13 /* FirebaseFirestoreSwift */,
+				FAF525B12A74107400474C13 /* FirebaseStorage */,
+				FA31219A2AA3C533001366F9 /* GoogleSignIn */,
+				FA31219C2AA3C533001366F9 /* GoogleSignInSwift */,
+				FA3121A32AA42056001366F9 /* HalfASheet */,
+				FAE50EE32ADB4B0F0011A61C /* SDWebImageSwiftUI */,
+			);
+			productName = QuoteBookApp;
+			productReference = FA3F4A032A4C73E60003E18B /* QuoteBookApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA3F4A122A4C73E70003E18B /* QuoteBookAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3F4A2A2A4C73E70003E18B /* Build configuration list for PBXNativeTarget "QuoteBookAppTests" */;
+			buildPhases = (
+				FA3F4A0F2A4C73E70003E18B /* Sources */,
+				FA3F4A102A4C73E70003E18B /* Frameworks */,
+				FA3F4A112A4C73E70003E18B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3F4A152A4C73E70003E18B /* PBXTargetDependency */,
+			);
+			name = QuoteBookAppTests;
+			productName = QuoteBookAppTests;
+			productReference = FA3F4A132A4C73E70003E18B /* QuoteBookAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA3F4A1C2A4C73E70003E18B /* QuoteBookAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3F4A2D2A4C73E70003E18B /* Build configuration list for PBXNativeTarget "QuoteBookAppUITests" */;
+			buildPhases = (
+				FA3F4A192A4C73E70003E18B /* Sources */,
+				FA3F4A1A2A4C73E70003E18B /* Frameworks */,
+				FA3F4A1B2A4C73E70003E18B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3F4A1F2A4C73E70003E18B /* PBXTargetDependency */,
+			);
+			name = QuoteBookAppUITests;
+			productName = QuoteBookAppUITests;
+			productReference = FA3F4A1D2A4C73E70003E18B /* QuoteBookAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA3F49FB2A4C73E60003E18B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FA3F4A022A4C73E60003E18B = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					FA3F4A122A4C73E70003E18B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = FA3F4A022A4C73E60003E18B;
+					};
+					FA3F4A1C2A4C73E70003E18B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = FA3F4A022A4C73E60003E18B;
+					};
+				};
+			};
+			buildConfigurationList = FA3F49FE2A4C73E60003E18B /* Build configuration list for PBXProject "QuoteBookApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA3F49FA2A4C73E60003E18B;
+			packageReferences = (
+				FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FAF525AC2A74107400474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				FA3121A22AA42056001366F9 /* XCRemoteSwiftPackageReference "HalfASheet" */,
+				FAE50EE22ADB4B0F0011A61C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
+			productRefGroup = FA3F4A042A4C73E60003E18B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA3F4A022A4C73E60003E18B /* QuoteBookApp */,
+				FA3F4A122A4C73E70003E18B /* QuoteBookAppTests */,
+				FA3F4A1C2A4C73E70003E18B /* QuoteBookAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA3F4A012A4C73E60003E18B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA255ABF2AF1D8550023150D /* JosefinSans-MediumItalic.ttf in Resources */,
+				FA255ABC2AF1D8550023150D /* JosefinSans-ExtraLightItalic.ttf in Resources */,
+				FA255AB92AF1D8550023150D /* JosefinSans-BoldItalic.ttf in Resources */,
+				FA255ABD2AF1D8550023150D /* JosefinSans-Medium.ttf in Resources */,
+				FA255AC02AF1D8550023150D /* JosefinSans-Italic.ttf in Resources */,
+				FA255AC22AF1D8550023150D /* JosefinSans-LightItalic.ttf in Resources */,
+				FA255ABB2AF1D8550023150D /* JosefinSans-ExtraLight.ttf in Resources */,
+				FA255AC12AF1D8550023150D /* JosefinSans-SemiBoldItalic.ttf in Resources */,
+				FA26230B2AD2419E000AEC40 /* GrandifloraOne-Regular.ttf in Resources */,
+				FA84006B2AD3874700E9AE74 /* YoungSerif-Regular.ttf in Resources */,
+				FA255AC52AF1D8550023150D /* JosefinSans-SemiBold.ttf in Resources */,
+				FACF66192ADAE8490098BA34 /* GoogleService-Info.plist in Resources */,
+				FA255AC32AF1D8550023150D /* JosefinSans-ThinItalic.ttf in Resources */,
+				FA255AB82AF1D8550023150D /* JosefinSans-Light.ttf in Resources */,
+				FA255ABA2AF1D8550023150D /* JosefinSans-Regular.ttf in Resources */,
+				FA3F4A0E2A4C73E70003E18B /* Preview Assets.xcassets in Resources */,
+				FA3F4A0B2A4C73E70003E18B /* Assets.xcassets in Resources */,
+				FA255ABE2AF1D8550023150D /* JosefinSans-Thin.ttf in Resources */,
+				FA255AC42AF1D8550023150D /* JosefinSans-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3F4A112A4C73E70003E18B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3F4A1B2A4C73E70003E18B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA3F49FF2A4C73E60003E18B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA89AF412AA65BA1005778BE /* DateStuff.swift in Sources */,
+				FA3121892AA3C2C0001366F9 /* LibraryViewModel.swift in Sources */,
+				FA5A087C2A79AE9E002F139B /* ViewModel.swift in Sources */,
+				FA89AF372AA656B6005778BE /* LibraryQuoteModel.swift in Sources */,
+				FAF01E222A6D70E600A960EF /* CollectionsView.swift in Sources */,
+				FA3121982AA3C4BC001366F9 /* AddQuoteView.swift in Sources */,
+				FAA312082AAD1FC900140B1E /* ColorSwitching.swift in Sources */,
+				FA31219F2AA3C56B001366F9 /* +View.swift in Sources */,
+				FA3F4A092A4C73E60003E18B /* ContentView.swift in Sources */,
+				FA3121A12AA3C5EF001366F9 /* EditQuoteView.swift in Sources */,
+				FA89AF392AA657AC005778BE /* LoginScreen.swift in Sources */,
+				FA2D8BDD2A6EFCF7000EE10C /* tab bar.swift in Sources */,
+				FADAEF1D2A7948EB00F246EE /* QuoteBookAppApp.swift in Sources */,
+				FA3BCD022AD71F55002D19B7 /* tabModel.swift in Sources */,
+				FA3121832AA3A1EF001366F9 /* QuoteViewModel.swift in Sources */,
+				FA31217A2AA39EDA001366F9 /* DiscoverPage.swift in Sources */,
+				FA31218F2AA3C341001366F9 /* TimeFormatting.swift in Sources */,
+				FA3121932AA3C375001366F9 /* GoogleSignBtn.swift in Sources */,
+				FA31217E2AA39F45001366F9 /* QuoteService.swift in Sources */,
+				FA31217C2AA39F15001366F9 /* SingleQuote.swift in Sources */,
+				FA89AF3F2AA65A7E005778BE /* LibraryView.swift in Sources */,
+				FA31218C2AA3C305001366F9 /* TagView.swift in Sources */,
+				FAE50EE12ADB4AD20011A61C /* ProfileImageView.swift in Sources */,
+				FA3121802AA39FCE001366F9 /* ColorChanger.swift in Sources */,
+				FA5A087A2A79AC8D002F139B /* DiscoverQuote.swift in Sources */,
+				FAE50EE62ADB527C0011A61C /* HomePage.swift in Sources */,
+				FA89AF482AA65C3F005778BE /* CollectionQuote.swift in Sources */,
+				FA3121912AA3C35B001366F9 /* AppDelegate.swift in Sources */,
+				FA89AF3B2AA657DF005778BE /* TagSelectionView.swift in Sources */,
+				FAF525B82A744DEE00474C13 /* AuthViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3F4A0F2A4C73E70003E18B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3F4A182A4C73E70003E18B /* QuoteBookAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3F4A192A4C73E70003E18B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3F4A242A4C73E70003E18B /* QuoteBookAppUITestsLaunchTests.swift in Sources */,
+				FA3F4A222A4C73E70003E18B /* QuoteBookAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA3F4A152A4C73E70003E18B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA3F4A022A4C73E60003E18B /* QuoteBookApp */;
+			targetProxy = FA3F4A142A4C73E70003E18B /* PBXContainerItemProxy */;
+		};
+		FA3F4A1F2A4C73E70003E18B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA3F4A022A4C73E60003E18B /* QuoteBookApp */;
+			targetProxy = FA3F4A1E2A4C73E70003E18B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA3F4A252A4C73E70003E18B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Quote Book";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA3F4A262A4C73E70003E18B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Quote Book";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA3F4A282A4C73E70003E18B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuoteBookApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuoteBookApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayush.QuoteBookApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA3F4A292A4C73E70003E18B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"QuoteBookApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuoteBookApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayush.QuoteBookApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA3F4A2B2A4C73E70003E18B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayush.QuoteBookAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuoteBookApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuoteBookApp";
+			};
+			name = Debug;
+		};
+		FA3F4A2C2A4C73E70003E18B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayush.QuoteBookAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuoteBookApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/QuoteBookApp";
+			};
+			name = Release;
+		};
+		FA3F4A2E2A4C73E70003E18B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayush.QuoteBookAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuoteBookApp;
+			};
+			name = Debug;
+		};
+		FA3F4A2F2A4C73E70003E18B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ayush.QuoteBookAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QuoteBookApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA3F49FE2A4C73E60003E18B /* Build configuration list for PBXProject "QuoteBookApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3F4A252A4C73E70003E18B /* Debug */,
+				FA3F4A262A4C73E70003E18B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3F4A272A4C73E70003E18B /* Build configuration list for PBXNativeTarget "QuoteBookApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3F4A282A4C73E70003E18B /* Debug */,
+				FA3F4A292A4C73E70003E18B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3F4A2A2A4C73E70003E18B /* Build configuration list for PBXNativeTarget "QuoteBookAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3F4A2B2A4C73E70003E18B /* Debug */,
+				FA3F4A2C2A4C73E70003E18B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3F4A2D2A4C73E70003E18B /* Build configuration list for PBXNativeTarget "QuoteBookAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3F4A2E2A4C73E70003E18B /* Debug */,
+				FA3F4A2F2A4C73E70003E18B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		FA3121A22AA42056001366F9 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		FAE50EE22ADB4B0F0011A61C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+		FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+		FAF525AC2A74107400474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA31219A2AA3C533001366F9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		FA31219C2AA3C533001366F9 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3121992AA3C533001366F9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		FA3121A32AA42056001366F9 /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3121A22AA42056001366F9 /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
+		FAE50EE32ADB4B0F0011A61C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAE50EE22ADB4B0F0011A61C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		FAF525AA2A740F4200474C13 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FAF525AD2A74107400474C13 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FAF525AF2A74107400474C13 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		FAF525B12A74107400474C13 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAF525A92A740F4200474C13 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FA3F49FB2A4C73E60003E18B /* Project object */;
+}
